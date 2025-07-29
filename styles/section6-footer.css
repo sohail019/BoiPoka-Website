@@ -78,7 +78,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 60px;
+    gap: 40px;
 }
 
 /* Footer Left */
@@ -414,9 +414,9 @@
         padding: 80px 0 50px;
     }
 
-    .footer-content {
+    /* .footer-content {
         gap: 80px;
-    }
+    } */
 
     .footer-left {
         gap: 25px;
