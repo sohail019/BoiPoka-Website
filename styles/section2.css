@@ -11,32 +11,33 @@
     padding: 0 20px;
 }
 
-/* Section Header */
+/* Section Header - Updated to left align */
 .section-header {
-    text-align: center;
+    text-align: left;
     margin-bottom: 80px;
 }
 
+/* Updated Title - Left aligned, Playfair Display 48px, weight 400, color #000000 */
 .what-makes-special .section-title {
     font-family: 'Playfair Display', serif;
+    text-align: left;
     font-size: 48px;
-    font-weight: 700;
-    color: #333;
+    font-weight: 400;
+    color: #000000;
     margin: 0 0 20px 0;
     line-height: 1.2;
 }
 
+/* Updated Subtitle - Left aligned, italic, color #000000 */
 .what-makes-special .section-subtitle {
     font-family: 'Playfair Display', serif;
     font-size: 16px;
     font-style: italic;
     font-weight: 400;
-    color: #666;
+    color: #000000;
     margin: 0;
     line-height: 1.4;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* Features Grid */
@@ -47,7 +48,7 @@
     align-items: flex-start;
 }
 
-/* Feature Column */
+/* Feature Column - Updated structure */
 .feature-column {
     display: flex;
     flex-direction: column;
@@ -55,60 +56,66 @@
     text-align: center;
 }
 
-/* Feature Visual Container */
+/* Feature Visual Container - Alphabet letter in background, poka image on top, letter below image */
 .feature-visual {
     position: relative;
     width: 200px;
-    height: 200px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
-/* Alphabet Letter Background */
+/* Alphabet Letter - absolutely positioned in background */
 .alphabet-letter {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 20%;
+    left: 35%;
+    transform: translate(-50%, -55%);
     font-family: 'Quicksand', sans-serif;
     font-size: 200px;
     font-weight: 700;
     color: #E1E1E1;
-    z-index: 1;
     line-height: 1;
     user-select: none;
+    z-index: 1;
+    pointer-events: none;
+    text-align: center;
+    margin: 0;
 }
 
-/* Poka Image */
+/* Poka Image - positioned above alphabet letter */
 .poka-image {
     position: relative;
     z-index: 2;
     width: 120px;
     height: auto;
     object-fit: contain;
+    display: block;
 }
 
-/* Feature Title */
+/* Feature Title - Quicksand, weight 700, color #000000 */
 .feature-title {
     font-family: 'Quicksand', sans-serif;
     font-size: 24px;
     font-weight: 700;
-    color: #333;
+    color: #000000;
     margin: 0 0 15px 0;
     line-height: 1.2;
+    text-align: center;
 }
 
-/* Feature Description */
+/* Updated Feature Description - Color #000000 */
 .feature-description {
     font-family: 'Quicksand', sans-serif;
     font-size: 12px;
     font-weight: 400;
-    color: #666;
+    color: #000000;
     line-height: 1.6;
     margin: 0;
     max-width: 250px;
+    text-align: center;
 }
 
 /* Tablet Responsive */
@@ -125,6 +132,11 @@
         font-size: 42px;
     }
     
+    .what-makes-special .section-subtitle {
+        font-size: 15px;
+    }
+    
+    /* Updated grid - 2 columns on tablet */
     .what-makes-special .features-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 50px;
@@ -132,11 +144,13 @@
     
     .feature-visual {
         width: 180px;
-        height: 180px;
+        height: 140px;
+        margin-bottom: 18px;
     }
     
     .alphabet-letter {
         font-size: 180px;
+        margin-bottom: 25px;
     }
     
     .poka-image {
@@ -163,9 +177,10 @@
     }
     
     .what-makes-special .section-subtitle {
-        font-size: 15px;
+        font-size: 14px;
     }
     
+    /* Updated grid - 1 column on mobile */
     .what-makes-special .features-grid {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -173,12 +188,13 @@
     
     .feature-visual {
         width: 160px;
-        height: 160px;
-        margin-bottom: 25px;
+        height: 120px;
+        margin-bottom: 15px;
     }
     
     .alphabet-letter {
         font-size: 160px;
+        margin-bottom: 20px;
     }
     
     .poka-image {
@@ -211,7 +227,7 @@
     }
     
     .what-makes-special .section-subtitle {
-        font-size: 14px;
+        font-size: 13px;
     }
     
     .what-makes-special .features-grid {
@@ -220,12 +236,13 @@
     
     .feature-visual {
         width: 140px;
-        height: 140px;
-        margin-bottom: 20px;
+        height: 110px;
+        margin-bottom: 12px;
     }
     
     .alphabet-letter {
         font-size: 140px;
+        margin-bottom: 18px;
     }
     
     .poka-image {
@@ -258,7 +275,7 @@
     }
     
     .what-makes-special .section-subtitle {
-        font-size: 18px;
+        font-size: 16px;
     }
     
     .what-makes-special .features-grid {
@@ -267,12 +284,13 @@
     
     .feature-visual {
         width: 220px;
-        height: 220px;
-        margin-bottom: 35px;
+        height: 160px;
+        margin-bottom: 25px;
     }
     
     .alphabet-letter {
         font-size: 220px;
+        margin-bottom: 35px;
     }
     
     .poka-image {
@@ -280,12 +298,12 @@
     }
     
     .feature-title {
-        font-size: 26px;
+        font-size: 24px;
         margin-bottom: 18px;
     }
     
     .feature-description {
-        font-size: 13px;
+        font-size: 12px;
         max-width: 280px;
     }
 }
