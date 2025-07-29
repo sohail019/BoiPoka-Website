@@ -56,7 +56,7 @@
 }
 
 .store-button-image {
-    height: 60px;
+    height: 95px;
     width: auto;
     object-fit: contain;
 }
@@ -202,7 +202,7 @@
     }
 
     .store-button-image {
-        height: 55px;
+        height: 80px;
     }
 
     .footer-main {
@@ -264,7 +264,7 @@
     }
 
     .store-button-image {
-        height: 50px;
+        height: 60px;
     }
 
     .footer-main {
@@ -339,9 +339,9 @@
         font-size: 13px;
     }
 
-    .store-button-image {
+    /* .store-button-image {
         height: 45px;
-    }
+    } */
 
     .footer-main {
         padding: 35px 0 20px;
@@ -406,9 +406,9 @@
         gap: 25px;
     }
 
-    .store-button-image {
+    /* .store-button-image {
         height: 65px;
-    }
+    } */
 
     .footer-main {
         padding: 80px 0 50px;

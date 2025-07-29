@@ -12,7 +12,7 @@
     flex: 1;
     position: relative;
     overflow: hidden;
-    min-width: 35rem;
+    min-width: 38rem;
 }
 
 .man-image {
@@ -209,7 +209,7 @@
 
 /* Mobile Frame */
 .mobile-mockup {
-    max-width: 270px;
+    max-width: 300px;
     width: 100%;
     height: auto;
     object-fit: contain;
@@ -287,6 +287,7 @@
         min-height: auto;
         padding: 0;
         background-color: #F5F5F5;
+        padding: 2rem 0;
     }
 
     /* Hide man image on mobile */
@@ -441,7 +442,7 @@
         line-height: 1.7;
     }
 
-    .mobile-mockup {
+    /* .mobile-mockup {
         max-width: 270px;
-    }
+    } */
 }
