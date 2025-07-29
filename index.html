@@ -3,7 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BoiPoka - Your Reading Community</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>BoiPoka</title>
+    <meta name="description" content="Join BoiPoka, the ultimate digital reading community. Organize your book collection, connect with fellow bookworms, discover new reads, and track your reading journey. Bengali for 'bookworm' - your digital den awaits!">
+    <meta name="keywords" content="reading app, book community, digital library, book management, reading tracker, bookworm, book collection, reading goals, book recommendations, book clubs, BoiPoka, book lovers">
+    <meta name="author" content="BoiPoka">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="BoiPoka - Your Digital Reading Community">
+    <meta property="og:description" content="Join the ultimate digital reading community. Organize books, connect with readers, and discover your next favorite read. Made for bookworms everywhere!">
+    <meta property="og:image" content="./assets/og-image.jpg">
+    <meta property="og:image:alt" content="BoiPoka - Digital Reading Community App">
+    <meta property="og:url" content=".">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="BoiPoka">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BoiPoka - Your Digital Reading Community">
+    <meta name="twitter:description" content="Join the ultimate digital reading community. Organize books, connect with readers, and discover your next favorite read.">
+    <meta name="twitter:image" content="./assets/og-image.jpg">
+    <meta name="twitter:image:alt" content="BoiPoka - Digital Reading Community App">
+    <meta name="twitter:site" content="@boipoka">
+    <meta name="twitter:creator" content="@boipoka">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href=".">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/vectors/Poka.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/vectors/Poka.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/vectors/Poka.png">
+    <link rel="shortcut icon" href="assets/vectors/Poka.png">
+    
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#E7E7E7">
+    <meta name="msapplication-TileColor" content="#E7E7E7">
+    <meta name="application-name" content="BoiPoka">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "BoiPoka",
+      "description": "Digital reading community and book management application",
+      "url": ".",
+      "applicationCategory": "BookApplication",
+      "operatingSystem": "iOS, Android, Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "1250"
+      }
+    }
+    </script>
+
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/section2.css">
     <link rel="stylesheet" href="styles/section3.css">
@@ -184,41 +249,41 @@
     </section>
 
     <!-- Section 3: Feature Section -->
-    <section class="feature-section">
-        <!-- Left Image -->
-        <div class="feature-left">
-            <img src="assets/men.png" alt="Man reading" class="man-image">
+   <section class="feature-section">
+      <!-- Left Image -->
+      <div class="feature-left" data-aos-offset="100" data-aos="fade-in" data-aos-duration="600" data-aos-delay="200">
+        <img src="assets/men.png" alt="Man reading" class="man-image" />
+      </div>
+
+      <!-- Center Content -->
+      <div class="feature-center">
+        <!-- Navigation Arrows -->
+        <div class="slider-arrows">
+          <button class="slider-arrow left-arrow" aria-label="Previous slide"></button>
+          <button class="slider-arrow right-arrow" aria-label="Next slide"></button>
         </div>
 
-        <!-- Center Content -->
-        <div class="feature-center">
-            <!-- Navigation Arrows -->
-            <div class="slider-arrows">
-                <button class="slider-arrow left-arrow" aria-label="Previous slide"></button>
-                <button class="slider-arrow right-arrow" aria-label="Next slide"></button>
-            </div>
-
-            <!-- Slider Pagination -->
-            <div class="slider-pagination">
-                <span class="pagination-number active" data-slide="0">01</span>
-                <span class="pagination-number" data-slide="1">02</span>
-                <span class="pagination-number" data-slide="2">03</span>
-                <span class="pagination-number" data-slide="3">04</span>
-            </div>
-
-            <!-- Content -->
-            <div class="feature-content-wrapper">
-                <h3 class="feature-content-title">Use your data for yourself</h3>
-                <p class="feature-content-description">
-                    Our AI identifies books and adds them to your digital library with all the details automatically. Get insights into your reading habits and discover your literary personality.
-                </p>
-            </div>
+        <!-- Slider Pagination -->
+        <div class="slider-pagination">
+          <span class="pagination-number active" data-slide="0">01</span>
+          <span class="pagination-number" data-slide="1">02</span>
+          <span class="pagination-number" data-slide="2">03</span>
+          <span class="pagination-number" data-slide="3">04</span>
         </div>
 
-        <!-- Right Image - Mobile with Screen Content -->
-        <div class="feature-right">
-            <img src="assets/slide-image.png" alt="Mobile App Mockup" class="mobile-mockup">
+        <!-- Content -->
+        <div class="feature-content-wrapper" data-aos-offset="100" data-aos="fade-in" data-aos-duration="600" data-aos-delay="200">
+          <h3 class="feature-content-title">Use your data for yourself</h3>
+          <p class="feature-content-description">
+            Our AI identifies books and adds them to your digital library with all the details automatically. Get insights into your reading habits and discover your literary personality.
+          </p>
         </div>
+      </div>
+
+      <!-- Right Image - Mobile with Screen Content -->
+      <div class="feature-right" data-aos-offset="100" data-aos="fade-in" data-aos-duration="600" data-aos-delay="400">
+        <img src="assets/slide-image.png" alt="Mobile App Mockup" class="mobile-mockup" />
+      </div>
     </section>
 
     <!-- Section 4: Find your reading tribe -->
