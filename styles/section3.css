@@ -1,9 +1,8 @@
 /* Section 3: Feature Section */
 .feature-section {
-    background-color: #F5F5F5;
+    background-color: #E7E7E7;
     min-height: 100vh;
     display: flex;
-    align-items: center;
     padding: 0;
     position: relative;
 }
@@ -11,14 +10,13 @@
 /* Left Image */
 .feature-left {
     flex: 1;
-    height: 100vh;
     position: relative;
     overflow: hidden;
 }
 
 .man-image {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
     object-position: center;
 }
@@ -82,20 +80,50 @@
     margin: 0;
 }
 
-/* Right Image */
+/* Right Image - Mobile Mockup Container */
 .feature-right {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 40px;
+    position: relative;
 }
 
+/* Mobile Frame */
 .mobile-mockup {
     max-width: 300px;
     width: 100%;
     height: auto;
     object-fit: contain;
+    position: relative;
+    z-index: 2;
+}
+
+/* Mobile Screen Content - Positioned absolutely over the mobile frame */
+.mobile-screen-content {
+    max-width: 300px;
+
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 75%;
+    background: white;
+    /* border-radius: 25px; */
+    overflow: hidden;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Screen Content Image */
+.screen-content-image {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+    object-position: top center;
 }
 
 /* Tablet Responsive */
@@ -106,6 +134,10 @@
     }
 
     .feature-left {
+        height: 60vh;
+    }
+
+    .man-image {
         height: 60vh;
     }
 
@@ -129,6 +161,12 @@
 
     .mobile-mockup {
         max-width: 250px;
+    }
+
+    .mobile-screen-content {
+        width: 83%;
+        height: 80%;
+        border-radius: 20px;
     }
 }
 
@@ -155,6 +193,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
     }
 
     .mobile-mockup {
@@ -162,6 +201,12 @@
         width: 80%;
         height: auto;
         filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.15));
+    }
+
+    .mobile-screen-content {
+        width: 85%;
+        height: 82%;
+        border-radius: 22px;
     }
 
     /* Center content comes after mobile image */
@@ -212,6 +257,12 @@
         max-width: 250px;
         width: 75%;
         filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.2));
+    }
+
+    .mobile-screen-content {
+        width: 86%;
+        height: 83%;
+        border-radius: 20px;
     }
 
     .feature-center {
@@ -271,6 +322,12 @@
 
     .mobile-mockup {
         max-width: 350px;
+    }
+
+    .mobile-screen-content {
+        width: 85%;
+        height: 82%;
+        border-radius: 28px;
     }
 
     .feature-right {
