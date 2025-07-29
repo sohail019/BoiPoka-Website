@@ -1,0 +1,291 @@
+/* Section 4: Find your reading tribe */
+.reading-tribe-section {
+    background-color: #494949;
+    height: 681px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 80px 0;
+}
+
+.reading-tribe-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* Section Header */
+.tribe-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.tribe-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: #BCBCBC;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+}
+
+.tribe-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    color: #D9D9D9;
+    margin: 0;
+    line-height: 1.4;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Tribe Features Grid */
+.tribe-features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Tribe Feature Column */
+.tribe-feature-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Tribe Icon Container */
+.tribe-icon {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tribe-feature-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+/* Tribe Feature Title */
+.tribe-feature-title {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #D9D9D9;
+    margin: 0 0 15px 0;
+    line-height: 1.2;
+}
+
+/* Tribe Feature Description */
+.tribe-feature-description {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #919191;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 250px;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+    .reading-tribe-section {
+        height: auto;
+        min-height: 600px;
+        padding: 60px 0;
+    }
+    
+    .tribe-header {
+        margin-bottom: 60px;
+    }
+    
+    .tribe-title {
+        font-size: 42px;
+    }
+    
+    .tribe-subtitle {
+        font-size: 15px;
+        max-width: 600px;
+    }
+    
+    .tribe-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        row-gap: 60px;
+    }
+    
+    .tribe-feature-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .tribe-icon {
+        margin-bottom: 25px;
+    }
+    
+    .tribe-feature-title {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+    
+    .tribe-feature-description {
+        font-size: 11px;
+        max-width: 280px;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .reading-tribe-section {
+        height: auto;
+        min-height: auto;
+        padding: 50px 0;
+    }
+    
+    .reading-tribe-section .container {
+        padding: 0 15px;
+    }
+    
+    .tribe-header {
+        margin-bottom: 50px;
+    }
+    
+    .tribe-title {
+        font-size: 36px;
+    }
+    
+    .tribe-subtitle {
+        font-size: 14px;
+        max-width: 500px;
+    }
+    
+    .tribe-features-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .tribe-feature-column {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
+    .tribe-feature-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .tribe-icon {
+        margin-bottom: 20px;
+    }
+    
+    .tribe-feature-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .tribe-feature-description {
+        font-size: 11px;
+        line-height: 1.5;
+        max-width: 300px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .reading-tribe-section {
+        padding: 40px 0;
+    }
+    
+    .tribe-header {
+        margin-bottom: 40px;
+    }
+    
+    .tribe-title {
+        font-size: 30px;
+    }
+    
+    .tribe-subtitle {
+        font-size: 13px;
+        max-width: 400px;
+    }
+    
+    .tribe-features-grid {
+        gap: 35px;
+    }
+    
+    .tribe-feature-column {
+        max-width: 300px;
+    }
+    
+    .tribe-feature-icon {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .tribe-icon {
+        margin-bottom: 18px;
+    }
+    
+    .tribe-feature-title {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    
+    .tribe-feature-description {
+        font-size: 10px;
+        line-height: 1.4;
+        max-width: 280px;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+    .reading-tribe-section {
+        height: 750px;
+        padding: 100px 0;
+    }
+    
+    .tribe-header {
+        margin-bottom: 100px;
+    }
+    
+    .tribe-title {
+        font-size: 52px;
+    }
+    
+    .tribe-subtitle {
+        font-size: 18px;
+        max-width: 800px;
+    }
+    
+    .tribe-features-grid {
+        gap: 50px;
+    }
+    
+    .tribe-feature-icon {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .tribe-icon {
+        margin-bottom: 35px;
+    }
+    
+    .tribe-feature-title {
+        font-size: 26px;
+        margin-bottom: 18px;
+    }
+    
+    .tribe-feature-description {
+        font-size: 13px;
+        max-width: 280px;
+        line-height: 1.7;
+    }
+}
