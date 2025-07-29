@@ -53,7 +53,15 @@ h3 {
     background: transparent;
     z-index: 1000;
     padding: 20px 0;
+  transition: all 0.6s ease;
 }
+.header.bg-sticky {
+    background-color: rgba(8,11,20,0.6);
+    background-color: #e7e7e7;
+    box-shadow: 0px 2px 0px rgba(0,0,0,0.06);
+    position: fixed;
+    margin-top: 0;
+  }
 
 .header-container {
     max-width: 1200px;
@@ -162,7 +170,7 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 25px;
+    /* gap: 25px; */
 }
 
 .hero-vector {
@@ -209,23 +217,25 @@ h3 {
     color: #333;
     margin: 0;
     text-align: left;
+    margin: 34px 0 20px;
 }
 
 .hero-description {
     font-family: 'Quicksand', sans-serif;
     font-size: 12px;
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 20px;
     color: #333;
     margin: 0;
     text-align: left;
+    max-width: 569px;
 }
 
 /* Pronunciation Section */
 .pronunciation-section {
-    width: 50vw;
+    width: 100%;
     max-width: 1300px;
-    margin: 60px auto 0 auto; 
+    margin: 60px auto 0;
     display: flex;
     justify-content: start;
     gap: 30px;
@@ -236,6 +246,7 @@ h3 {
 .pronunciation-column {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 /* Separators between columns */
@@ -330,64 +341,74 @@ section {
 
 /* Mobile Responsive - 768px */
 @media (max-width: 768px) {
+    .header{
+    position: fixed;
+    transition: all 0.9s ease;
+    /* padding-top: rem(16px); */
+    }
     .header-container {
         padding: 0 15px;
         flex-direction: column;
         gap: 15px;
     }
-    
+
     .logo {
         gap: 8px;
     }
-    
+
     .poka-logo {
         height: 25px;
     }
-    
+
     .boipoka-text {
         height: 10px;
     }
-    
+
     .navigation {
         margin-left: 0;
     }
-    
+
     .nav-menu {
         gap: 10px;
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+
     .nav-link {
         font-size: 10px;
     }
-    
+
     .hero {
         padding: 140px 0 40px;
     }
-    
+    .hero-container{
+        position: static;
+    }
+
     .hero-background {
         width: 100%;
         opacity: 0.3;
+        position: static;
+        inset: 0;
     }
-    
+
     .hero-content {
         max-width: 100%;
         align-items: center;
         text-align: center;
         background: rgba(231, 231, 231, 0.9);
-        padding: 25px;
+        padding: 25px 0;
         border-radius: 15px;
         margin: 0 15px;
     }
-    
+
     /* Mobile Hero Logo */
     .hero-logo-arrangement {
         gap: 8px;
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+
     .hero-boi-text,
     .hero-poka-text {
         font-size: 32px;
@@ -401,27 +422,30 @@ section {
     .hero-poka-text {
         margin-left: 15px;
     }
-    
+
     .hero-poka {
         height: 45px;
         margin: 0 2px;
     }
-    
+
     .hero-title {
         font-size: 28px;
         text-align: center;
     }
-    
+
     .hero-description {
         text-align: center;
     }
-    
+
     /* Mobile Pronunciation Section - Stacked Layout */
     .pronunciation-section {
         /* grid-template-columns: 1fr; */
         gap: 20px;
-        text-align: center;
+        /* text-align: center; */
+        text-align: left;
         padding: 0 15px;
+        flex-direction: column;
+        margin-top: 40px;
     }
 
     .pronunciation-column:not(:last-child)::after {
@@ -437,13 +461,13 @@ section {
         border-bottom: none;
         padding-bottom: 0;
     }
-    
+
     .pronunciation-item {
         justify-content: center;
         flex-wrap: wrap;
         gap: 5px;
     }
-    
+
     .pronunciation-label {
         min-width: auto;
         text-align: center;
@@ -464,15 +488,15 @@ section {
     .poka-logo {
         height: 20px;
     }
-    
+
     .boipoka-text {
         height: 10px;
     }
-    
+
     .hero-title {
         font-size: 24px;
     }
-    
+
     .hero-boi-text,
     .hero-poka-text {
         font-size: 28px;
@@ -486,16 +510,16 @@ section {
     .hero-poka-text {
         margin-left: 10px;
     }
-    
+
     .hero-poka {
         height: 40px;
         margin: 0 1px;
     }
-    
+
     .hero-description {
         font-size: 11px;
     }
-    
+
     .pronunciation-section {
         gap: 15px;
         padding: 0 10px;
@@ -518,18 +542,19 @@ section {
 /* Large Desktop - 1400px+ */
 @media (min-width: 1400px) {
     .hero-content {
-        max-width: 50%;
-        gap: 30px;
+        max-width: 80%;
+        width: 100%;
+        /* gap: 30px; */
     }
-    
+
     .hero-logo-arrangement {
         gap: 20px;
     }
-    
+
     .hero-boi-text,
     .hero-poka-text {
         /* font-size: 80px; */
-        font-size: 130px;
+        font-size: 95px;
         letter-spacing: 100px;
         z-index: 2;
     }
@@ -541,16 +566,16 @@ section {
     .hero-poka-text {
         margin-left: 50px;
     }
-    
+
     .hero-poka {
         height: 100px;
         margin: 0 8px;
     }
-    
+
     .hero-title {
         font-size: 36px;
     }
-    
+
     .pronunciation-section {
         gap: 35px;
     }
