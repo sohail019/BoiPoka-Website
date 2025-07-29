@@ -44,6 +44,16 @@ h3 {
     font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
+/* AOS */
+[data-aos="fade-up"] {
+  transform: translateY(10px) !important;
+  transition-property: transform, opacity;
+}
+
+[data-aos="fade-up"].aos-animate {
+    transform: translateX(0) !important;
+}
+
 
 /* Header */
 .header {

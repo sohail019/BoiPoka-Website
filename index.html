@@ -15,6 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--Aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <!-- Header Section -->
@@ -53,126 +55,132 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-background">
-            <img src="assets/banner_lady.png" alt="Lady reading">
-        </div>
-        <div class="hero-container">
-            <!-- Hero Content Left -->
-            <div class="hero-content">
-                <div class="hero-vector">
-                    <div class="hero-logo-arrangement">
-                        <span class="hero-boi-text">BOI</span>
-                        <img src="assets/vectors/Poka.png" class="hero-poka" alt="Poka Vector">
-                        <span class="hero-poka-text">POKA</span>
-                    </div>
-                </div>
-                
-                <h1 class="hero-title">consolidate. manage. show off.</h1>
-                
-                <p class="hero-description">
-                    Basically everything you want to know about a book that's begging you to be read.<br>
-                    All your books - physical, ebooks, and even audiobooks. Arrange, stack them up in shelves (as many as you want). You can even rearrange your books on a shelf which is literally a feat that can't do that.<br>
-                    There is really, no better way to get to know friends (and strangers) than this.
-                </p>
-
-                <!-- Pronunciation Section -->
-                <div class="pronunciation-section">
-                    <!-- Column 1: Pronunciation & Etymology -->
-                    <div class="pronunciation-column">
-                        <div class="pronunciation-item">
-                            <span class="pronunciation-label">Pronunciation:</span>
-                            <span class="pronunciation-text">/boi̯ˈpoka/</span>
-                        </div>
-                        <div class="pronunciation-item">
-                            <span class="pronunciation-label">Etymology:</span>
-                            <span class="pronunciation-text">Bengali – boi (book) + poka (worm)</span>
-                        </div>
-                    </div>
-
-                    <!-- Column 2: /boi/ pronunciation -->
-                    <div class="pronunciation-column">
-                        <div class="pronunciation-item">
-                            <span class="pronunciation-label">/boi/</span>
-                            <span class="pronunciation-text">like "showy" but smoother <br/>with the 'w' silent</span>
-                        </div>
-                    </div>
-
-                    <!-- Column 3: /po/ and /ka/ pronunciation -->
-                    <div class="pronunciation-column">
-                        <div class="pronunciation-item">
-                            <span class="pronunciation-label">/ˈpo/</span>
-                            <span class="pronunciation-text">with a clear, short "po"</span>
-                        </div>
-                        <div class="pronunciation-item">
-                            <span class="pronunciation-label">/ka/</span>
-                            <span class="pronunciation-text">with an open "ka" sound</span>
-                        </div>
-                    </div>
-                </div>
+      <div class="hero-container">
+        <!-- Hero Content Left -->
+        <div class="hero-content">
+          <div class="hero-vector">
+            <div class="hero-logo-arrangement" data-aos="fade-in" data-aos-duration="600" data-aos-delay="400">
+              <span class="hero-boi-text">BOI</span>
+              <img src="assets/vectors/Poka.png" class="hero-poka" alt="Poka Vector" />
+              <span class="hero-poka-text">POKA</span>
             </div>
+          </div>
+
+          <h1 class="hero-title" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">consolidate. manage. show off.</h1>
+
+          <p class="hero-description" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">
+            Basically everything you want to know about a book that's begging you to be read.<br />
+            All your books - physical, ebooks, and even audiobooks. Arrange, stack them up in shelves (as many as you want). You can even rearrange your books on a shelf which is literally a feat that
+            can't do that.<br />
+            There is really, no better way to get to know friends (and strangers) than this.
+          </p>
+
+          <!-- Pronunciation Section -->
+          <div class="pronunciation-section">
+            <!-- Column 1: Pronunciation & Etymology -->
+            <div class="pronunciation-column" data-aos-offset="10" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+              <div class="pronunciation-item">
+                <span class="pronunciation-label">Pronunciation:</span>
+                <span class="pronunciation-text">/boi̯ˈpoka/</span>
+              </div>
+              <div class="pronunciation-item">
+                <span class="pronunciation-label">Etymology:</span>
+                <span class="pronunciation-text">Bengali – boi (book) + poka (worm)</span>
+              </div>
+            </div>
+
+            <!-- Column 2: /boi/ pronunciation -->
+            <div class="pronunciation-column" data-aos-offset="10" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+              <div class="pronunciation-item">
+                <span class="pronunciation-label">/boi/</span>
+                <span class="pronunciation-text"
+                  >like "showy" but smoother <br />
+                  with the 'w' silent</span
+                >
+              </div>
+            </div>
+
+            <!-- Column 3: /po/ and /ka/ pronunciation -->
+            <div class="pronunciation-column" data-aos-offset="10" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+              <div class="pronunciation-item">
+                <span class="pronunciation-label">/ˈpo/</span>
+                <span class="pronunciation-text">with a clear, short "po"</span>
+              </div>
+              <div class="pronunciation-item">
+                <span class="pronunciation-label">/ka/</span>
+                <span class="pronunciation-text">with an open "ka" sound</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="hero-background" data-aos-offset="10" data-aos="fade-in" data-aos-duration="600" data-aos-delay="300">
+        <img src="assets/banner_lady.png" alt="Lady reading" />
+      </div>
     </section>
 
     <!-- Section 2: What makes it special -->
     <section class="what-makes-special">
-        <div class="container">
-            <!-- Section Header -->
-            <div class="section-header">
-                <h2 class="section-title">What makes it special?</h2>
-                <p class="section-subtitle">We're not just another reading app. We're your literary companion that gets it.</p>
-            </div>
-
-            <!-- Features Grid -->
-            <div class="features-grid">
-                <!-- Column 1 -->
-                <div class="feature-column">
-                    <div class="feature-visual">
-                        <span class="alphabet-letter">A</span>
-                        <img src="assets/vectors/poka_tennis.png" alt="Poka Recording" class="poka-image">
-                    </div>
-                    <h3 class="feature-title">Snap & done</h3>
-                    <p class="feature-description">
-                        Take photos of your books and watch the magic happen. Our smart tech identifies everything - title, author, edition, you name it. No more typing book names one by one like it's 2003.
-                    </p>
-                </div>
-
-                <!-- Column 2 -->
-                <div class="feature-column">
-                    <div class="feature-visual">
-                        <span class="alphabet-letter">B</span>
-                        <img src="assets/vectors/poka_buddy.png" alt="Poka with Box" class="poka-image">
-                    </div>
-                    <h3 class="feature-title">Add buddies</h3>
-                    <p class="feature-description">
-                        Take photos of your books and watch the magic happen. Our smart tech identifies everything - title, author, edition, you name it. No more typing book names one by one like it's 2019.
-                    </p>
-                </div>
-
-                <!-- Column 3 -->
-                <div class="feature-column">
-                    <div class="feature-visual">
-                        <span class="alphabet-letter">C</span>
-                        <img src="assets/vectors/poka_box.png" alt="Poka Sending" class="poka-image">
-                    </div>
-                    <h3 class="feature-title">Share shelves</h3>
-                    <p class="feature-description">
-                        Take photos of your books and watch the magic happen. Our smart tech identifies everything - title, author, edition, you name it. No more typing book names one by one like it's 2019.
-                    </p>
-                </div>
-
-                <!-- Column 4 -->
-                <div class="feature-column">
-                    <div class="feature-visual">
-                        <span class="alphabet-letter">D</span>
-                        <img src="assets/vectors/poka_mic.png" alt="Poka Playing Tennis" class="poka-image">
-                    </div>
-                    <h3 class="feature-title">Never be bored</h3>
-                    <p class="feature-description">
-                        Take photos of your books and watch the magic happen. Our smart tech identifies everything - title, author, edition, you name it. No more typing book names one by one like it's 2019.
-                    </p>
-                </div>
-            </div>
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+          <h2 class="section-title" data-aos-offset="100" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">What makes it special?</h2>
+          <p class="section-subtitle" data-aos-offset="100" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+            We're not just another reading app. We're your literary companion that gets it.
+          </p>
         </div>
+
+        <!-- Features Grid -->
+        <div class="features-grid">
+          <!-- Column 1 -->
+          <div class="feature-column" data-aos-offset="100" data-aos="fade-in" data-aos-duration="600" data-aos-delay="400">
+            <div class="feature-visual">
+              <span class="alphabet-letter">A</span>
+              <img src="assets/vectors/poka_tennis.png" alt="Poka Recording" class="poka-image" />
+            </div>
+            <h3 class="feature-title">Snap & done</h3>
+            <p class="feature-description">
+              Take photos of your books and watch the magic happen. Our smart tech identifies everything - title, author, edition, you name it. No more typing book names one by one like it's 2003.
+            </p>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="feature-column" data-aos-offset="100" data-aos="fade-in" data-aos-duration="600" data-aos-delay="500">
+            <div class="feature-visual">
+              <span class="alphabet-letter">B</span>
+              <img src="assets/vectors/poka_buddy.png" alt="Poka with Box" class="poka-image" />
+            </div>
+            <h3 class="feature-title">Add buddies</h3>
+            <p class="feature-description">
+              Take photos of your books and watch the magic happen. Our smart tech identifies everything - title, author, edition, you name it. No more typing book names one by one like it's 2019.
+            </p>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="feature-column" data-aos-offset="100" data-aos="fade-in" data-aos-duration="600" data-aos-delay="600">
+            <div class="feature-visual">
+              <span class="alphabet-letter">C</span>
+              <img src="assets/vectors/poka_box.png" alt="Poka Sending" class="poka-image" />
+            </div>
+            <h3 class="feature-title">Share shelves</h3>
+            <p class="feature-description">
+              Take photos of your books and watch the magic happen. Our smart tech identifies everything - title, author, edition, you name it. No more typing book names one by one like it's 2019.
+            </p>
+          </div>
+
+          <!-- Column 4 -->
+          <div class="feature-column" data-aos-offset="100" data-aos="fade-in" data-aos-duration="600" data-aos-delay="700">
+            <div class="feature-visual">
+              <span class="alphabet-letter">D</span>
+              <img src="assets/vectors/poka_mic.png" alt="Poka Playing Tennis" class="poka-image" />
+            </div>
+            <h3 class="feature-title">Never be bored</h3>
+            <p class="feature-description">
+              Take photos of your books and watch the magic happen. Our smart tech identifies everything - title, author, edition, you name it. No more typing book names one by one like it's 2019.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Section 3: Feature Section -->
@@ -184,241 +192,239 @@
 
         <!-- Center Content -->
         <div class="feature-center">
-    <!-- Slider Pagination -->
-    <div class="slider-pagination">
-        <span class="pagination-number active" data-slide="0">01</span>
-        <span class="pagination-number" data-slide="1">02</span>
-        <span class="pagination-number" data-slide="2">03</span>
-        <span class="pagination-number" data-slide="3">04</span>
-    </div>
+            <!-- Navigation Arrows -->
+            <div class="slider-arrows">
+                <button class="slider-arrow left-arrow" aria-label="Previous slide"></button>
+                <button class="slider-arrow right-arrow" aria-label="Next slide"></button>
+            </div>
 
-    <!-- Content -->
-    <div class="feature-content-wrapper">
-        <h3 class="feature-content-title">Use your data for yourself</h3>
-        <p class="feature-content-description">
-            Our AI identifies books and adds them to your digital library with all the details automatically.
-        </p>
-    </div>
-    
-</div>
+            <!-- Slider Pagination -->
+            <div class="slider-pagination">
+                <span class="pagination-number active" data-slide="0">01</span>
+                <span class="pagination-number" data-slide="1">02</span>
+                <span class="pagination-number" data-slide="2">03</span>
+                <span class="pagination-number" data-slide="3">04</span>
+            </div>
 
+            <!-- Content -->
+            <div class="feature-content-wrapper">
+                <h3 class="feature-content-title">Use your data for yourself</h3>
+                <p class="feature-content-description">
+                    Our AI identifies books and adds them to your digital library with all the details automatically. Get insights into your reading habits and discover your literary personality.
+                </p>
+            </div>
+        </div>
 
         <!-- Right Image - Mobile with Screen Content -->
         <div class="feature-right">
             <img src="assets/slide-image.png" alt="Mobile App Mockup" class="mobile-mockup">
-            <!-- Screen Content Overlay -->
-            <!-- <div class="mobile-screen-content">
-                <img src="assets/screen.png" alt="Analytics Screen" class="screen-content-image">
-            </div> -->
         </div>
     </section>
 
     <!-- Section 4: Find your reading tribe -->
     <section class="reading-tribe-section">
-        <div class="container">
-            <!-- Section Header -->
-            <div class="tribe-header">
-                <h2 class="tribe-title">Find your reading tribe</h2>
-                <p class="tribe-subtitle">Because the best books are meant to be shared, discussed, and obsessed over together</p>
-            </div>
-
-            <!-- Tribe Features Grid -->
-            <div class="tribe-features-grid">
-                <!-- Column 1 -->
-                <div class="tribe-feature-column">
-                    <div class="tribe-icon">
-                        <img src="assets/vectors/book_club.png" alt="Book Clubs Icon" class="tribe-feature-icon">
-                    </div>
-                    <h3 class="tribe-feature-title">Book Clubs</h3>
-                    <p class="tribe-feature-description">
-                        Create your club around your favourite genres, authors, or reading goals
-                    </p>
-                </div>
-
-                <!-- Column 2 -->
-                <div class="tribe-feature-column">
-                    <div class="tribe-icon">
-                        <img src="assets/vectors/chat.png" alt="Discussions Icon" class="tribe-feature-icon">
-                    </div>
-                    <h3 class="tribe-feature-title">Discussions</h3>
-                    <p class="tribe-feature-description">
-                        Dive into deep, spoiler-rich convos and those "OMG did you read that part?!" moments
-                    </p>
-                </div>
-
-                <!-- Column 3 -->
-                <div class="tribe-feature-column">
-                    <div class="tribe-icon">
-                        <img src="assets/vectors/challenges.png" alt="Challenges Icon" class="tribe-feature-icon">
-                    </div>
-                    <h3 class="tribe-feature-title">Challenges</h3>
-                    <p class="tribe-feature-description">
-                        Join a reading challenge, or achieving those sweet, (no, you don't need to read 100 books)
-                    </p>
-                </div>
-
-                <!-- Column 4 -->
-                <div class="tribe-feature-column">
-                    <div class="tribe-icon">
-                        <img src="assets/vectors/achievements.png" alt="Achievements Icon" class="tribe-feature-icon">
-                    </div>
-                    <h3 class="tribe-feature-title">Achievements</h3>
-                    <p class="tribe-feature-description">
-                        Celebrate your reading milestones with badges that matter to book lovers
-                    </p>
-                </div>
-            </div>
+      <div class="container">
+        <!-- Section Header -->
+        <div class="tribe-header">
+          <h2 class="tribe-title" data-aos-offset="100" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">Find your reading tribe</h2>
+          <p class="tribe-subtitle" data-aos-offset="100" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+            Because the best books are meant to be shared, discussed, and obsessed over together
+          </p>
         </div>
+
+        <!-- Tribe Features Grid -->
+        <div class="tribe-features-grid">
+          <!-- Column 1 -->
+          <div class="tribe-feature-column" data-aos-offset="100" data-aos="fade-in" data-aos-duration="800" data-aos-delay="400">
+            <div class="tribe-icon">
+              <img src="assets/vectors/book_club.png" alt="Book Clubs Icon" class="tribe-feature-icon" />
+            </div>
+            <h3 class="tribe-feature-title">Book Clubs</h3>
+            <p class="tribe-feature-description">Create your club around your favourite genres, authors, or reading goals</p>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="tribe-feature-column" data-aos-offset="100" data-aos="fade-in" data-aos-duration="800" data-aos-delay="500">
+            <div class="tribe-icon">
+              <img src="assets/vectors/chat.png" alt="Discussions Icon" class="tribe-feature-icon" />
+            </div>
+            <h3 class="tribe-feature-title">Discussions</h3>
+            <p class="tribe-feature-description">Dive into deep, spoiler-rich convos and those "OMG did you read that part?!" moments</p>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="tribe-feature-column" data-aos-offset="100" data-aos="fade-in" data-aos-duration="800" data-aos-delay="600">
+            <div class="tribe-icon">
+              <img src="assets/vectors/challenges.png" alt="Challenges Icon" class="tribe-feature-icon" />
+            </div>
+            <h3 class="tribe-feature-title">Challenges</h3>
+            <p class="tribe-feature-description">Join a reading challenge, or achieving those sweet, (no, you don't need to read 100 books)</p>
+          </div>
+
+          <!-- Column 4 -->
+          <div class="tribe-feature-column" data-aos-offset="100" data-aos="fade-in" data-aos-duration="800" data-aos-delay="700">
+            <div class="tribe-icon">
+              <img src="assets/vectors/achievements.png" alt="Achievements Icon" class="tribe-feature-icon" />
+            </div>
+            <h3 class="tribe-feature-title">Achievements</h3>
+            <p class="tribe-feature-description">Celebrate your reading milestones with badges that matter to book lovers</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Section 5: Community -->
     <section class="community-section">
-        <div class="container">
-            <!-- Section Header -->
-            <div class="community-header">
-                <h2 class="community-title">See what the community is talking about</h2>
-                <p class="community-subtitle">from our instagram fam</p>
-            </div>
-
-            <!-- Community Cards Container -->
-            <div class="community-cards-container">
-                <!-- Community Cards Grid -->
-                <div class="community-cards-grid">
-                    <!-- Card 1 -->
-                    <div class="community-card">
-                        <div class="card-image">
-                            <img src="assets/book1.png" alt="Community Post 1" class="community-post-image">
-                        </div>
-                        <div class="card-stats">
-                            <div class="stats-row">
-                                <img src="assets/vectors/eye_icon.png" alt="Views" class="eye-icon">
-                                <span class="view-count">12.3k</span>
-                            </div>
-                            <div class="post-date">12th Jan 2026</div>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="community-card">
-                        <div class="card-image">
-                            <img src="assets/book2.png" alt="Community Post 2" class="community-post-image">
-                        </div>
-                        <div class="card-stats">
-                            <div class="stats-row">
-                                <img src="assets/vectors/eye_icon.png" alt="Views" class="eye-icon">
-                                <span class="view-count">5.6k</span>
-                            </div>
-                            <div class="post-date">14th Feb 2026</div>
-                        </div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="community-card">
-                        <div class="card-image">
-                            <img src="assets/book3.png" alt="Community Post 3" class="community-post-image">
-                        </div>
-                        <div class="card-stats">
-                            <div class="stats-row">
-                                <img src="assets/vectors/eye_icon.png" alt="Views" class="eye-icon">
-                                <span class="view-count">15.4k</span>
-                            </div>
-                            <div class="post-date">26th Mar 2026</div>
-                        </div>
-                    </div>
-
-                    <!-- Card 4 -->
-                    <div class="community-card">
-                        <div class="card-image">
-                            <img src="assets/book4.png" alt="Community Post 4" class="community-post-image">
-                        </div>
-                        <div class="card-stats">
-                            <div class="stats-row">
-                                <img src="assets/vectors/eye_icon.png" alt="Views" class="eye-icon">
-                                <span class="view-count">2.3k</span>
-                            </div>
-                            <div class="post-date">4th Apr 2026</div>
-                        </div>
-                    </div>
-
-                    <!-- Card 5 -->
-                    <div class="community-card">
-                        <div class="card-image">
-                            <img src="assets/book5.png" alt="Community Post 5" class="community-post-image">
-                        </div>
-                        <div class="card-stats">
-                            <div class="stats-row">
-                                <img src="assets/vectors/eye_icon.png" alt="Views" class="eye-icon">
-                                <span class="view-count">45.6k</span>
-                            </div>
-                            <div class="post-date">8th Apr 2026</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <!-- Section Header -->
+        <div class="community-header">
+          <h2 class="community-title" data-aos-offset="100" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">See what the community is talking about</h2>
+          <p class="community-subtitle" data-aos-offset="100" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">from our instagram fam</p>
         </div>
+
+        <!-- Community Cards Container -->
+        <div class="community-cards-container">
+          <!-- Community Cards Grid -->
+          <div class="community-cards-grid">
+            <!-- Card 1 -->
+            <div class="community-card" data-aos-offset="100" data-aos="fade-in" data-aos-duration="800" data-aos-delay="400">
+              <div class="card-image">
+                <img src="assets/book1.png" alt="Community Post 1" class="community-post-image" />
+              </div>
+              <div class="card-stats">
+                <div class="stats-row">
+                  <img src="assets/vectors/eye_icon.png" alt="Views" class="eye-icon" />
+                  <span class="view-count">12.3k</span>
+                </div>
+                <div class="post-date">12th Jan 2026</div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="community-card" data-aos-offset="100" data-aos="fade-in" data-aos-duration="800" data-aos-delay="500">
+              <div class="card-image">
+                <img src="assets/book2.png" alt="Community Post 2" class="community-post-image" />
+              </div>
+              <div class="card-stats">
+                <div class="stats-row">
+                  <img src="assets/vectors/eye_icon.png" alt="Views" class="eye-icon" />
+                  <span class="view-count">5.6k</span>
+                </div>
+                <div class="post-date">14th Feb 2026</div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="community-card" data-aos-offset="100" data-aos="fade-in" data-aos-duration="800" data-aos-delay="600">
+              <div class="card-image">
+                <img src="assets/book3.png" alt="Community Post 3" class="community-post-image" />
+              </div>
+              <div class="card-stats">
+                <div class="stats-row">
+                  <img src="assets/vectors/eye_icon.png" alt="Views" class="eye-icon" />
+                  <span class="view-count">15.4k</span>
+                </div>
+                <div class="post-date">26th Mar 2026</div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="community-card" data-aos-offset="100" data-aos="fade-in" data-aos-duration="800" data-aos-delay="700">
+              <div class="card-image">
+                <img src="assets/book4.png" alt="Community Post 4" class="community-post-image" />
+              </div>
+              <div class="card-stats">
+                <div class="stats-row">
+                  <img src="assets/vectors/eye_icon.png" alt="Views" class="eye-icon" />
+                  <span class="view-count">2.3k</span>
+                </div>
+                <div class="post-date">4th Apr 2026</div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="community-card" data-aos-offset="100" data-aos="fade-in" data-aos-duration="800" data-aos-delay="800">
+              <div class="card-image">
+                <img src="assets/book5.png" alt="Community Post 5" class="community-post-image" />
+              </div>
+              <div class="card-stats">
+                <div class="stats-row">
+                  <img src="assets/vectors/eye_icon.png" alt="Views" class="eye-icon" />
+                  <span class="view-count">45.6k</span>
+                </div>
+                <div class="post-date">8th Apr 2026</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Section 6: Call to Action -->
     <section class="cta-section-main">
-        <div class="container">
-            <!-- Section Header -->
-            <div class="cta-header">
-                <h2 class="cta-title">Ready to meet your reading tribe</h2>
-                <p class="cta-subtitle">Join the bookworms who've already found their digital home</p>
-            </div>
-
-            <!-- App Store Buttons -->
-            <div class="app-store-buttons">
-                <a href="#" class="store-button" aria-label="Download on App Store">
-                    <img src="assets/appstore.png" alt="Download on App Store" class="store-button-image">
-                </a>
-                <a href="#" class="store-button" aria-label="Get it on Google Play">
-                    <img src="assets/playstore.png" alt="Get it on Google Play" class="store-button-image">
-                </a>
-            </div>
+      <div class="container">
+        <!-- Section Header -->
+        <div class="cta-header">
+          <h2 class="cta-title" data-aos-offset="100" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">Ready to meet your reading tribe</h2>
+          <p class="cta-subtitle" data-aos-offset="100" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">Join the bookworms who've already found their digital home</p>
         </div>
+
+        <!-- App Store Buttons -->
+        <div class="app-store-buttons">
+          <a href="#" class="store-button" aria-label="Download on App Store" data-aos-offset="100" data-aos="fade-in" data-aos-duration="800" data-aos-delay="400">
+            <img src="assets/appstore.png" alt="Download on App Store" class="store-button-image" />
+          </a>
+          <a href="#" class="store-button" aria-label="Get it on Google Play" data-aos-offset="100" data-aos="fade-in" data-aos-duration="800" data-aos-delay="500">
+            <img src="assets/playstore.png" alt="Get it on Google Play" class="store-button-image" />
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer-main" id="footer">
-        <div class="container">
-            <div class="footer-content">
-                <!-- Left Section -->
-                <div class="footer-left">
-                    <div class="footer-poka">
-                        <img src="assets/vectors/Poka.png" alt="Poka" class="footer-poka-image">
-                    </div>
-                    <div class="footer-text">
-                        <h3 class="footer-heading">Made for bookworms everywhere</h3>
-                        <p class="footer-description">Boi-Poka means 'bookworm' in Bengali - and we're proud to be your digital den!</p>
-                    </div>
-                </div>
-
-                <!-- Vertical Separator -->
-                <div class="footer-separator"></div>
-
-                <!-- Middle Section -->
-                <div class="footer-middle">
-                    <h4 class="footer-section-title">Contact</h4>
-                    <p class="footer-contact-email">
-                        <a class="footer-link" href="mailto:hello@boi-poka.com">hello@boi-poka.com</a>
-                    </p>
-                    <p class="footer-contact-location">Mumbai</p>
-                </div>
-
-                <!-- Vertical Separator -->
-                <div class="footer-separator"></div>
-
-                <!-- Right Section -->
-                <div class="footer-right">
-                    <a href="pages/terms_and_conditions.html" class="footer-link">Terms & Conditions</a>
-                    <a href="pages/privacy_policy.html" class="footer-link">Privacy Policy</a>
-                </div>
+    <footer class="footer-main">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Left Section -->
+          <div class="footer-left">
+            <div class="footer-poka" data-aos-offset="100" data-aos="fade-in" data-aos-duration="600" data-aos-delay="200">
+              <img src="assets/vectors/Poka.png" alt="Poka" class="footer-poka-image" />
             </div>
+            <div class="footer-text">
+              <h3 class="footer-heading" data-aos-offset="100" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">Made for bookworms everywhere</h3>
+              <p class="footer-description" data-aos-offset="10" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+                Boi-Poka means 'bookworm' in Bengali - and we're proud to be your digital den!
+              </p>
+            </div>
+          </div>
+
+          <!-- Vertical Separator -->
+          <div class="footer-separator"></div>
+
+          <!-- Middle Section -->
+          <div class="footer-middle">
+            <h4 class="footer-section-title" data-aos-offset="10" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">Contact</h4>
+            <p class="footer-contact-email">
+              <a class="footer-link" href="mailto:hello@boi-poka.com" data-aos-offset="10" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">hello@boi-poka.com</a>
+            </p>
+            <p class="footer-contact-location" data-aos-offset="10" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">Mumbai</p>
+          </div>
+
+          <!-- Vertical Separator -->
+          <div class="footer-separator"></div>
+
+          <!-- Right Section -->
+          <div class="footer-right">
+            <a href="pages/terms_and_conditions.html" class="footer-link" data-aos-offset="10" data-aos="fade-up" data-aos-duration="600" data-aos-delay="600">Terms & Conditions</a>
+            <a href="pages/privacy_policy.html" class="footer-link" data-aos-offset="10" data-aos="fade-up" data-aos-duration="600" data-aos-delay="700">Privacy Policy</a>
+          </div>
         </div>
+      </div>
     </footer>
     <script src="./script.js"></script>
     <script src="./main.js"></script>
     <script src="./mobile-menu.js"></script>
+    <script src="./feature-slider.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 </body>
 </html>

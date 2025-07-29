@@ -26,12 +26,92 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
-    /* padding: 80px 60px;
-    max-width: 500px; */
-    border: 0px 1px 0px 1px;
+    padding: 80px 60px;
+    position: relative;
+}
+
+.feature-center::before,
+.feature-center::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 1px;
+    background-color: #000;
+    left: 0;
+    top: 0;
+}
+.feature-center::after{
+    left: auto;
+    right: 0;
+}
+
+/* Navigation Arrows - Updated Design */
+.slider-arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -100px;
+    right: -100px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.slider-arrow {
+    background: transparent;
+    border: none;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    pointer-events: all;
+    position: relative;
+    padding: 0;
+}
+
+.slider-arrow::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #666;
+    border-top: none;
+    border-right: none;
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+}
+
+.slider-arrow.right-arrow::before {
+    transform: rotate(-135deg);
+}
+
+.slider-arrow:hover::before {
     border-color: #333;
+    transform: rotate(45deg) scale(1.1);
+}
+
+.slider-arrow.right-arrow:hover::before {
+    transform: rotate(-135deg) scale(1.1);
+}
+
+.slider-arrow:active::before {
+    transform: rotate(45deg) scale(0.9);
+}
+
+.slider-arrow.right-arrow:active::before {
+    transform: rotate(-135deg) scale(0.9);
+}
+
+/* Remove text content from arrows */
+.slider-arrow {
+    font-size: 0;
+    color: transparent;
 }
 
 /* Slider Pagination */
@@ -39,6 +119,7 @@
     display: flex;
     gap: 20px;
     margin-bottom: 50px;
+    z-index: 5;
 }
 
 .pagination-number {
@@ -47,12 +128,13 @@
     font-weight: 700;
     color: #CECACA;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     user-select: none;
 }
 
 .pagination-number.active {
     color: #787878;
+    transform: scale(1.05);
 }
 
 .pagination-number:hover {
@@ -63,19 +145,16 @@
 .feature-content-wrapper {
     max-width: 400px;
     min-height: 120px;
-    transition: opacity 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px 40px;
+    opacity: 1;
+    transition: opacity 0.4s ease;
 }
 
 .feature-content-wrapper.fade-out {
     opacity: 0;
-}
-
-.feature-content-wrapper.fade-in {
-    opacity: 1;
 }
 
 .feature-content-title {
@@ -86,6 +165,7 @@
     margin: 0 0 20px 0;
     text-align: center;
     line-height: 1.3;
+    transition: opacity 0.4s ease;
 }
 
 .feature-content-description {
@@ -96,6 +176,7 @@
     line-height: 1.6;
     margin: 0;
     text-align: center;
+    transition: opacity 0.4s ease;
 }
 
 /* Right Image - Mobile Mockup Container */
@@ -116,31 +197,17 @@
     object-fit: contain;
     position: relative;
     z-index: 2;
+    opacity: 1;
+    transition: opacity 0.4s ease;
 }
 
-/* Mobile Screen Content - Positioned absolutely over the mobile frame */
-.mobile-screen-content {
-    max-width: 300px;
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    height: 75%;
-    background: white;
-    /* border-radius: 25px; */
-    overflow: hidden;
-    z-index: 99;
-    display: flex;
-    flex-direction: column;
+.mobile-mockup.fade-out {
+    opacity: 0;
 }
 
-/* Screen Content Image */
-.screen-content-image {
-    width: 100%;
-    /* height: 100%; */
-    object-fit: cover;
-    object-position: top center;
+/* Auto-slide pause indicator */
+.feature-section.paused .slider-pagination {
+    opacity: 0.8;
 }
 
 /* Tablet Responsive */
@@ -160,7 +227,21 @@
 
     .feature-center {
         padding: 60px 40px;
-        max-width: 450px;
+    }
+
+    .slider-arrows {
+        left: -80px;
+        right: -80px;
+    }
+
+    .slider-arrow {
+        width: 50px;
+        height: 50px;
+    }
+
+    .slider-arrow::before {
+        width: 18px;
+        height: 18px;
     }
 
     .slider-pagination {
@@ -179,15 +260,9 @@
     .mobile-mockup {
         max-width: 250px;
     }
-
-    .mobile-screen-content {
-        width: 83%;
-        height: 80%;
-        border-radius: 20px;
-    }
 }
 
-/* Mobile Responsive - Updated to show mobile screen prominently on top */
+/* Mobile Responsive */
 @media (max-width: 768px) {
     .feature-section {
         flex-direction: column;
@@ -220,12 +295,6 @@
         filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.15));
     }
 
-    .mobile-screen-content {
-        width: 85%;
-        height: 82%;
-        border-radius: 22px;
-    }
-
     /* Center content comes after mobile image */
     .feature-center {
         order: 1;
@@ -234,6 +303,11 @@
         align-items: center;
         text-align: center;
         background-color: #F5F5F5;
+    }
+
+    /* Hide arrows on mobile */
+    .slider-arrows {
+        display: none;
     }
 
     .slider-pagination {
@@ -264,7 +338,7 @@
     }
 }
 
-/* Small Mobile - Enhanced mobile screen visibility */
+/* Small Mobile */
 @media (max-width: 480px) {
     .feature-right {
         padding: 30px 15px 10px;
@@ -274,12 +348,6 @@
         max-width: 250px;
         width: 55%;
         filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.2));
-    }
-
-    .mobile-screen-content {
-        width: 86%;
-        height: 83%;
-        border-radius: 20px;
     }
 
     .feature-center {
@@ -311,7 +379,21 @@
 @media (min-width: 1400px) {
     .feature-center {
         padding: 100px 80px;
-        max-width: 600px;
+    }
+
+    .slider-arrows {
+        left: -120px;
+        right: -120px;
+    }
+
+    .slider-arrow {
+        width: 70px;
+        height: 70px;
+    }
+
+    .slider-arrow::before {
+        width: 24px;
+        height: 24px;
     }
 
     .slider-pagination {
@@ -339,11 +421,5 @@
 
     .mobile-mockup {
         max-width: 270px;
-    }
-
-    .mobile-screen-content {
-        width: 85%;
-        height: 82%;
-        border-radius: 28px;
     }
 }

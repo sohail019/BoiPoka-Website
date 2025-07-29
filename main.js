@@ -33,4 +33,8 @@ jQuery(document).ready(function ($) {
   }
 
   init();
+
+  AOS.init({
+    once: true,
+  });
 });
