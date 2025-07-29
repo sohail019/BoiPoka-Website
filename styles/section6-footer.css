@@ -1,0 +1,457 @@
+/* Section 6: Call to Action */
+.cta-section-main {
+    background-color: #FFFFFF;
+    padding: 80px 0;
+    position: relative;
+}
+
+.cta-section-main .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* CTA Header */
+.cta-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.cta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: #000000;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+}
+
+.cta-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    color: #000000;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* App Store Buttons */
+.app-store-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.store-button {
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.store-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.store-button-image {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Footer */
+.footer-main {
+    background-color: #FFFFFF;
+    padding: 60px 0 40px;
+}
+
+.footer-main .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+/* Footer Left */
+.footer-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 2;
+}
+
+.footer-poka {
+    flex-shrink: 0;
+}
+
+.footer-poka-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.footer-text {
+    flex: 1;
+}
+
+.footer-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: #000000;
+    margin: 0 0 15px 0;
+    line-height: 1.2;
+}
+
+.footer-description {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #000000;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Footer Separator */
+.footer-separator {
+    width: 1px;
+    height: 100px;
+    background-color: #E0E0E0;
+    flex-shrink: 0;
+}
+
+/* Footer Middle */
+.footer-middle {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.footer-section-title {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000000;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+}
+
+.footer-contact-email,
+.footer-contact-location {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Footer Right */
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+}
+
+.footer-link {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+    text-decoration: none;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #666666;
+    text-decoration: underline;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+    .cta-section-main {
+        padding: 60px 0;
+    }
+
+    .cta-header {
+        margin-bottom: 50px;
+    }
+
+    .cta-title {
+        font-size: 42px;
+    }
+
+    .cta-subtitle {
+        font-size: 15px;
+    }
+
+    .app-store-buttons {
+        gap: 15px;
+    }
+
+    .store-button-image {
+        height: 55px;
+    }
+
+    .footer-main {
+        padding: 50px 0 30px;
+    }
+
+    .footer-content {
+        gap: 40px;
+    }
+
+    .footer-left {
+        gap: 15px;
+    }
+
+    .footer-poka-image {
+        width: 70px;
+        height: 70px;
+    }
+
+    .footer-heading {
+        font-size: 28px;
+    }
+
+    .footer-description {
+        font-size: 15px;
+    }
+
+    .footer-separator {
+        height: 80px;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .cta-section-main {
+        padding: 50px 0;
+    }
+
+    .cta-section-main .container {
+        padding: 0 15px;
+    }
+
+    .cta-header {
+        margin-bottom: 40px;
+    }
+
+    .cta-title {
+        font-size: 36px;
+        line-height: 1.1;
+    }
+
+    .cta-subtitle {
+        font-size: 14px;
+    }
+
+    .app-store-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .store-button-image {
+        height: 50px;
+    }
+
+    .footer-main {
+        padding: 40px 0 25px;
+    }
+
+    .footer-main .container {
+        padding: 0 15px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+        align-items: stretch;
+    }
+
+    .footer-left {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-poka-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .footer-heading {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .footer-description {
+        font-size: 14px;
+        text-align: center;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .footer-separator {
+        display: none;
+    }
+
+    .footer-middle {
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-right {
+        text-align: center;
+        align-items: center;
+        gap: 12px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .cta-section-main {
+        padding: 40px 0;
+    }
+
+    .cta-header {
+        margin-bottom: 35px;
+    }
+
+    .cta-title {
+        font-size: 30px;
+    }
+
+    .cta-subtitle {
+        font-size: 13px;
+    }
+
+    .store-button-image {
+        height: 45px;
+    }
+
+    .footer-main {
+        padding: 35px 0 20px;
+    }
+
+    .footer-content {
+        gap: 25px;
+    }
+
+    .footer-left {
+        gap: 12px;
+    }
+
+    .footer-poka-image {
+        width: 55px;
+        height: 55px;
+    }
+
+    .footer-heading {
+        font-size: 22px;
+    }
+
+    .footer-description {
+        font-size: 13px;
+        max-width: 350px;
+    }
+
+    .footer-section-title {
+        font-size: 13px;
+    }
+
+    .footer-contact-email,
+    .footer-contact-location,
+    .footer-link {
+        font-size: 13px;
+    }
+
+    .footer-right {
+        gap: 10px;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+    .cta-section-main {
+        padding: 100px 0;
+    }
+
+    .cta-header {
+        margin-bottom: 80px;
+    }
+
+    .cta-title {
+        font-size: 52px;
+    }
+
+    .cta-subtitle {
+        font-size: 18px;
+    }
+
+    .app-store-buttons {
+        gap: 25px;
+    }
+
+    .store-button-image {
+        height: 65px;
+    }
+
+    .footer-main {
+        padding: 80px 0 50px;
+    }
+
+    .footer-content {
+        gap: 80px;
+    }
+
+    .footer-left {
+        gap: 25px;
+    }
+
+    .footer-poka-image {
+        width: 90px;
+        height: 90px;
+    }
+
+    .footer-heading {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .footer-description {
+        font-size: 17px;
+    }
+
+    .footer-separator {
+        height: 120px;
+    }
+
+    .footer-section-title {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+
+    .footer-contact-email,
+    .footer-contact-location,
+    .footer-link {
+        font-size: 15px;
+    }
+
+    .footer-right {
+        gap: 18px;
+    }
+}

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/section3.css">
     <link rel="stylesheet" href="styles/section4.css">
     <link rel="stylesheet" href="styles/section5.css">
+    <link rel="stylesheet" href="styles/section6-footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -322,48 +323,60 @@
         </div>
     </section>
 
-    <!-- Ready to Meet Your Reading Tribe Section -->
-    <section class="cta-section">
+    <!-- Section 6: Call to Action -->
+    <section class="cta-section-main">
         <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Meet Your Reading Tribe?</h2>
-                <p>Join thousands of book lovers and discover your next great read today</p>
-                <div class="app-buttons">
-                    <a href="#" class="app-button">
-                        <img src="https://via.placeholder.com/150x50/000/fff?text=Google+Play" alt="Download on Google Play" />
-                    </a>
-                    <a href="#" class="app-button">
-                        <img src="https://via.placeholder.com/150x50/000/fff?text=App+Store" alt="Download on App Store" />
-                    </a>
-                </div>
+            <!-- Section Header -->
+            <div class="cta-header">
+                <h2 class="cta-title">Ready to meet your reading tribe</h2>
+                <p class="cta-subtitle">Join the bookworms who've already found their digital home</p>
+            </div>
+
+            <!-- App Store Buttons -->
+            <div class="app-store-buttons">
+                <a href="#" class="store-button" aria-label="Download on App Store">
+                    <img src="assets/appstore.png" alt="Download on App Store" class="store-button-image">
+                </a>
+                <a href="#" class="store-button" aria-label="Get it on Google Play">
+                    <img src="assets/playstore.png" alt="Get it on Google Play" class="store-button-image">
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer-main">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>BoiPoka</h3>
-                    <p>Your ultimate reading community platform</p>
+                <!-- Left Section -->
+                <div class="footer-left">
+                    <div class="footer-poka">
+                        <img src="assets/vectors/Poka.png" alt="Poka" class="footer-poka-image">
+                    </div>
+                    <div class="footer-text">
+                        <h3 class="footer-heading">Made for bookworms everywhere</h3>
+                        <p class="footer-description">Boi-Poka means 'bookworm' in Bengali - and we're proud to be your digital den!</p>
+                    </div>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="pages/terms.html">Terms & Conditions</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
+
+                <!-- Vertical Separator -->
+                <div class="footer-separator"></div>
+
+                <!-- Middle Section -->
+                <div class="footer-middle">
+                    <h4 class="footer-section-title">Contact</h4>
+                    <p class="footer-contact-email">hello@boi-poka.com</p>
+                    <p class="footer-contact-location">Mumbai</p>
                 </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <p>Email: hello@boipoka.com</p>
-                    <p>Phone: +1 (555) 123-4567</p>
+
+                <!-- Vertical Separator -->
+                <div class="footer-separator"></div>
+
+                <!-- Right Section -->
+                <div class="footer-right">
+                    <a href="pages/terms_and_conditions.html" class="footer-link">Terms & Conditions</a>
+                    <a href="#" class="footer-link">Privacy Policy</a>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 BoiPoka. All rights reserved.</p>
             </div>
         </div>
     </footer>
