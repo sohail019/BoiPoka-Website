@@ -160,8 +160,9 @@
 .footer-right {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 8px;
     flex: 1;
+    margin-top: 2.4rem;
 }
 
 .footer-link {
@@ -318,6 +319,7 @@
         text-align: center;
         align-items: center;
         gap: 12px;
+        margin-top: 1.4rem;
     }
 }
 
@@ -451,7 +453,7 @@
         font-size: 15px;
     }
 
-    .footer-right {
+    /* .footer-right {
         gap: 18px;
-    }
+    } */
 }
