@@ -31,18 +31,131 @@
     max-width: 100%;
 }
 
-.terms-paragraph {
+/* Ordered List Styling */
+.terms-list {
+    counter-reset: terms-counter;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.terms-item {
+    margin-bottom: 35px;
+    position: relative;
+    counter-increment: terms-counter;
+}
+
+.terms-item:last-child {
+    margin-bottom: 0;
+}
+
+.terms-item::before {
+    content: counter(terms-counter) ".";
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #666666;
+    position: absolute;
+    left: -25px;
+    top: 0;
+    width: 20px;
+}
+
+/* Terms Item Title */
+.terms-item-title {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000000;
+    margin: 0 0 12px 0;
+    line-height: 1.3;
+}
+
+/* Terms Item Description */
+.terms-item-description {
     font-family: 'Quicksand', sans-serif;
     font-size: 12px;
     font-weight: 400;
     color: #000000;
     line-height: 1.6;
-    margin: 0 0 20px 0;
+    margin: 0 0 8px 0;
     text-align: justify;
 }
 
-.terms-paragraph:last-child {
+.terms-item-description:last-child {
     margin-bottom: 0;
+}
+
+/* Sub-section Styling */
+.terms-sub-section {
+    margin-bottom: 15px;
+}
+
+.terms-sub-section:last-child {
+    margin-bottom: 0;
+}
+
+.terms-sub-title {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0 0 6px 0;
+    line-height: 1.3;
+}
+
+/* Sub-list Styling */
+.terms-sub-list {
+    margin: 0 0 8px 0;
+    padding-left: 20px;
+    list-style: none;
+}
+
+.terms-sub-list:last-child {
+    margin-bottom: 0;
+}
+
+.terms-sub-list li {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #000000;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    position: relative;
+    text-align: justify;
+}
+
+.terms-sub-list li:last-child {
+    margin-bottom: 0;
+}
+
+.terms-sub-list li::before {
+    content: "•";
+    color: #666666;
+    font-weight: bold;
+    position: absolute;
+    left: -15px;
+    top: 0;
+}
+
+/* Bold text within list items */
+.terms-sub-list li strong {
+    font-weight: 600;
+    color: #000000;
+}
+
+/* Email Link Styling */
+.terms-email-link {
+    color: #666666;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.terms-email-link:hover {
+    color: #333333;
+    text-decoration: underline;
 }
 
 /* Active nav link styling */
@@ -55,7 +168,6 @@
 @media (max-width: 1024px) {
     .terms-content {
         padding: 60px 0;
-        /* margin-top: 75px; */
     }
 
     .terms-header {
@@ -66,9 +178,35 @@
         font-size: 42px;
     }
 
-    .terms-paragraph {
+    .terms-item {
+        margin-bottom: 30px;
+    }
+
+    .terms-item::before {
         font-size: 13px;
-        margin-bottom: 18px;
+        left: -23px;
+    }
+
+    .terms-item-title {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .terms-item-description {
+        font-size: 12px;
+    }
+
+    .terms-sub-title {
+        font-size: 12px;
+    }
+
+    .terms-sub-list li {
+        font-size: 12px;
+        margin-bottom: 7px;
+    }
+
+    .terms-sub-section {
+        margin-bottom: 12px;
     }
 }
 
@@ -91,19 +229,53 @@
         line-height: 1.1;
     }
 
-    .terms-paragraph {
+    .terms-item {
+        margin-bottom: 25px;
+        padding-left: 25px;
+    }
+
+    .terms-item::before {
         font-size: 12px;
-        margin-bottom: 16px;
+        left: 0;
+        width: 20px;
+    }
+
+    .terms-item-title {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    .terms-item-description {
+        font-size: 11px;
         text-align: left;
+    }
+
+    .terms-sub-title {
+        font-size: 11px;
+        margin-bottom: 5px;
+    }
+
+    .terms-sub-list {
+        padding-left: 15px;
+    }
+
+    .terms-sub-list li {
+        font-size: 11px;
+        margin-bottom: 6px;
+        text-align: left;
+    }
+
+    .terms-sub-list li::before {
+        left: -12px;
+    }
+
+    .terms-sub-section {
+        margin-bottom: 10px;
     }
 }
 
 /* Small Mobile */
 @media (max-width: 480px) {
-    /* .terms-content {
-        padding: 40px 0;
-    } */
-
     .terms-header {
         margin-bottom: 35px;
     }
@@ -112,10 +284,44 @@
         font-size: 30px;
     }
 
-    .terms-paragraph {
+    .terms-item {
+        margin-bottom: 20px;
+        padding-left: 22px;
+    }
+
+    .terms-item::before {
         font-size: 11px;
-        margin-bottom: 15px;
+        width: 18px;
+    }
+
+    .terms-item-title {
+        font-size: 11px;
+        margin-bottom: 6px;
+        line-height: 1.2;
+    }
+
+    .terms-item-description {
+        font-size: 10px;
         line-height: 1.5;
+    }
+
+    .terms-sub-title {
+        font-size: 10px;
+        margin-bottom: 4px;
+    }
+
+    .terms-sub-list li {
+        font-size: 10px;
+        margin-bottom: 5px;
+        line-height: 1.4;
+    }
+
+    .terms-sub-list li::before {
+        left: -10px;
+    }
+
+    .terms-sub-section {
+        margin-bottom: 8px;
     }
 }
 
@@ -137,9 +343,37 @@
         font-size: 52px;
     }
 
-    .terms-paragraph {
+    .terms-item {
+        margin-bottom: 40px;
+    }
+
+    .terms-item::before {
+        font-size: 15px;
+        left: -28px;
+    }
+
+    .terms-item-title {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .terms-item-description {
         font-size: 13px;
-        margin-bottom: 22px;
         line-height: 1.7;
+    }
+
+    .terms-sub-title {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    .terms-sub-list li {
+        font-size: 13px;
+        margin-bottom: 10px;
+        line-height: 1.7;
+    }
+
+    .terms-sub-section {
+        margin-bottom: 18px;
     }
 }
