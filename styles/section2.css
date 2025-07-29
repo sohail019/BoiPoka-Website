@@ -1,0 +1,291 @@
+.what-makes-special {
+    background-color: #FFFFFF;
+    padding: 80px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.what-makes-special .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Section Header */
+.section-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.what-makes-special .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+}
+
+.what-makes-special .section-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Features Grid */
+.what-makes-special .features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Feature Column */
+.feature-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Feature Visual Container */
+.feature-visual {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+/* Alphabet Letter Background */
+.alphabet-letter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 200px;
+    font-weight: 700;
+    color: #E1E1E1;
+    z-index: 1;
+    line-height: 1;
+    user-select: none;
+}
+
+/* Poka Image */
+.poka-image {
+    position: relative;
+    z-index: 2;
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Feature Title */
+.feature-title {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 15px 0;
+    line-height: 1.2;
+}
+
+/* Feature Description */
+.feature-description {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 250px;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+    .what-makes-special {
+        padding: 60px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 60px;
+    }
+    
+    .what-makes-special .section-title {
+        font-size: 42px;
+    }
+    
+    .what-makes-special .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+    
+    .feature-visual {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .alphabet-letter {
+        font-size: 180px;
+    }
+    
+    .poka-image {
+        width: 100px;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .what-makes-special {
+        padding: 50px 0;
+    }
+    
+    .what-makes-special .container {
+        padding: 0 15px;
+    }
+    
+    .section-header {
+        margin-bottom: 50px;
+    }
+    
+    .what-makes-special .section-title {
+        font-size: 36px;
+    }
+    
+    .what-makes-special .section-subtitle {
+        font-size: 15px;
+    }
+    
+    .what-makes-special .features-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .feature-visual {
+        width: 160px;
+        height: 160px;
+        margin-bottom: 25px;
+    }
+    
+    .alphabet-letter {
+        font-size: 160px;
+    }
+    
+    .poka-image {
+        width: 90px;
+    }
+    
+    .feature-title {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+    
+    .feature-description {
+        font-size: 11px;
+        max-width: 300px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .what-makes-special {
+        padding: 40px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .what-makes-special .section-title {
+        font-size: 30px;
+    }
+    
+    .what-makes-special .section-subtitle {
+        font-size: 14px;
+    }
+    
+    .what-makes-special .features-grid {
+        gap: 35px;
+    }
+    
+    .feature-visual {
+        width: 140px;
+        height: 140px;
+        margin-bottom: 20px;
+    }
+    
+    .alphabet-letter {
+        font-size: 140px;
+    }
+    
+    .poka-image {
+        width: 80px;
+    }
+    
+    .feature-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .feature-description {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+    .what-makes-special {
+        padding: 100px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 100px;
+    }
+    
+    .what-makes-special .section-title {
+        font-size: 52px;
+    }
+    
+    .what-makes-special .section-subtitle {
+        font-size: 18px;
+    }
+    
+    .what-makes-special .features-grid {
+        gap: 50px;
+    }
+    
+    .feature-visual {
+        width: 220px;
+        height: 220px;
+        margin-bottom: 35px;
+    }
+    
+    .alphabet-letter {
+        font-size: 220px;
+    }
+    
+    .poka-image {
+        width: 130px;
+    }
+    
+    .feature-title {
+        font-size: 26px;
+        margin-bottom: 18px;
+    }
+    
+    .feature-description {
+        font-size: 13px;
+        max-width: 280px;
+    }
+}
