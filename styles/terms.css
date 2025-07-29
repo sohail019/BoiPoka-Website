@@ -1,0 +1,144 @@
+/* Terms & Conditions Page Styles */
+.terms-content {
+    background-color: #FFFFFF;
+    padding: 80px 0;
+    min-height: 70vh;
+}
+
+.terms-content .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Terms Header */
+.terms-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.terms-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 400;
+    color: #000000;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Terms Body */
+.terms-body {
+    max-width: 100%;
+}
+
+.terms-paragraph {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #000000;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+    text-align: justify;
+}
+
+.terms-paragraph:last-child {
+    margin-bottom: 0;
+}
+
+/* Active nav link styling */
+.nav-link.active {
+    color: #666666;
+    font-weight: 600;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+    .terms-content {
+        padding: 60px 0;
+    }
+
+    .terms-header {
+        margin-bottom: 50px;
+    }
+
+    .terms-title {
+        font-size: 42px;
+    }
+
+    .terms-paragraph {
+        font-size: 13px;
+        margin-bottom: 18px;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .terms-content {
+        padding: 50px 0;
+    }
+
+    .terms-content .container {
+        padding: 0 15px;
+    }
+
+    .terms-header {
+        margin-bottom: 40px;
+    }
+
+    .terms-title {
+        font-size: 36px;
+        line-height: 1.1;
+    }
+
+    .terms-paragraph {
+        font-size: 12px;
+        margin-bottom: 16px;
+        text-align: left;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .terms-content {
+        padding: 40px 0;
+    }
+
+    .terms-header {
+        margin-bottom: 35px;
+    }
+
+    .terms-title {
+        font-size: 30px;
+    }
+
+    .terms-paragraph {
+        font-size: 11px;
+        margin-bottom: 15px;
+        line-height: 1.5;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+    .terms-content {
+        padding: 100px 0;
+    }
+
+    .terms-content .container {
+        max-width: 900px;
+    }
+
+    .terms-header {
+        margin-bottom: 80px;
+    }
+
+    .terms-title {
+        font-size: 52px;
+    }
+
+    .terms-paragraph {
+        font-size: 13px;
+        margin-bottom: 22px;
+        line-height: 1.7;
+    }
+}
