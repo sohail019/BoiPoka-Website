@@ -10,26 +10,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <!-- Header Section -->
     <header class="header">
         <div class="header-container">
             <div class="logo">
-                <img src="../assets/vectors/Poka.png" alt="Poka" class="poka-logo">
-                <img src="../assets/vectors/BoiPoka.png" alt="BoiPoka Logo" class="boipoka-text">
+                <img src="../assets/vectors/Poka.png" alt="Poka" class="poka-logo" />
+                <img src="../assets/vectors/BoiPoka.png" alt="BoiPoka Logo" class="boipoka-text" />
+                <a class="logo-link" href="../index.html"></a>
             </div>
+            
+            <!-- Mobile Hamburger Menu Button -->
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
             <nav class="navigation">
                 <ul class="nav-menu">
+                    <li class="nav-separator">|</li>
                     <li><a href="../index.html" class="nav-link">HOME</a></li>
                     <li class="nav-separator">|</li>
                     <li><a href="terms_and_conditions.html" class="nav-link active">T&C</a></li>
                     <li class="nav-separator">|</li>
                     <li><a href="privacy_policy.html" class="nav-link">PRIVACY POLICY</a></li>
-                    <li class="nav-separator">|</li> 
-                    <li><a href="#" class="nav-link">CONTACT US</a></li>
+                    <li class="nav-separator">|</li>
+                    <li><a href="contact_us.html" class="nav-link">CONTACT US</a></li>
                 </ul>
             </nav>
+
+            <!-- Mobile Menu Overlay -->
+            <div class="mobile-menu-overlay"></div>
         </div>
     </header>
 
@@ -65,7 +80,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer-main">
+    <footer class="footer-main" id="footer">
         <div class="container">
             <div class="footer-content">
                 <!-- Left Section -->
@@ -85,7 +100,9 @@
                 <!-- Middle Section -->
                 <div class="footer-middle">
                     <h4 class="footer-section-title">Contact</h4>
-                    <p class="footer-contact-email">hello@boi-poka.com</p>
+                    <p class="footer-contact-email">
+                        <a class="footer-link" href="mailto:hello@boi-poka.com">hello@boi-poka.com</a>
+                    </p>
                     <p class="footer-contact-location">Mumbai</p>
                 </div>
 
@@ -95,10 +112,14 @@
                 <!-- Right Section -->
                 <div class="footer-right">
                     <a href="terms_and_conditions.html" class="footer-link">Terms & Conditions</a>
-                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="privacy_policy.html" class="footer-link">Privacy Policy</a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script src="../script.js"></script>
+    <script src="../main.js"></script>
+    <script src="../mobile-menu.js"></script>
 </body>
 </html>

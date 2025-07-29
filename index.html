@@ -19,23 +19,36 @@
 <body>
     <!-- Header Section -->
     <header class="header">
-        <div class="header-container">
-            <div class="logo">
-                <img src="assets/vectors/Poka.png" alt="Poka" class="poka-logo">
-                <img src="assets/vectors/BoiPoka.png" alt="BoiPoka Logo" class="boipoka-text">
-            </div>
-            <nav class="navigation">
-                <ul class="nav-menu">
-                    <li><a href="#" class="nav-link">HOME</a></li>
-                    <li class="nav-separator">|</li>
-                    <li><a href="pages/terms_and_conditions.html" class="nav-link">T&C</a></li>
-                    <li class="nav-separator">|</li>
-                    <li><a href="pages/privacy_policy.html" class="nav-link">PRIVACY POLICY</a></li>
-                    <li class="nav-separator">|</li>
-                    <li><a href="#footer" class="nav-link">CONTACT US</a></li>
-                </ul>
-            </nav>
+      <div class="header-container">
+        <div class="logo">
+          <img src="assets/vectors/Poka.png" alt="Poka" class="poka-logo" />
+          <img src="assets/vectors/BoiPoka.png" alt="BoiPoka Logo" class="boipoka-text" />
+          <a class="logo-link" href="javascript:void(0);"></a>
         </div>
+        
+        <!-- Mobile Hamburger Menu Button -->
+        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+        <nav class="navigation">
+          <ul class="nav-menu">
+            <li class="nav-separator">|</li>
+            <li><a href="#" class="nav-link active">HOME</a></li>
+            <li class="nav-separator">|</li>
+            <li><a href="pages/terms_and_conditions.html" class="nav-link">T&C</a></li>
+            <li class="nav-separator">|</li>
+            <li><a href="pages/privacy_policy.html" class="nav-link">PRIVACY POLICY</a></li>
+            <li class="nav-separator">|</li>
+            <li><a href="pages/contact_us.html" class="nav-link">CONTACT US</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay"></div>
+      </div>
     </header>
 
     <!-- Hero Section -->
@@ -225,7 +238,7 @@
                 <!-- Column 2 -->
                 <div class="tribe-feature-column">
                     <div class="tribe-icon">
-                        <img src="assets/vectors/book_club.png" alt="Discussions Icon" class="tribe-feature-icon">
+                        <img src="assets/vectors/chat.png" alt="Discussions Icon" class="tribe-feature-icon">
                     </div>
                     <h3 class="tribe-feature-title">Discussions</h3>
                     <p class="tribe-feature-description">
@@ -406,5 +419,6 @@
     </footer>
     <script src="./script.js"></script>
     <script src="./main.js"></script>
+    <script src="./mobile-menu.js"></script>
 </body>
 </html>

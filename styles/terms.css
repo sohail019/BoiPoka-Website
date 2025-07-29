@@ -55,6 +55,7 @@
 @media (max-width: 1024px) {
     .terms-content {
         padding: 60px 0;
+        /* margin-top: 75px; */
     }
 
     .terms-header {
@@ -74,7 +75,7 @@
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .terms-content {
-        padding: 50px 0;
+        padding: 115px 0 40px;
     }
 
     .terms-content .container {
@@ -99,9 +100,9 @@
 
 /* Small Mobile */
 @media (max-width: 480px) {
-    .terms-content {
+    /* .terms-content {
         padding: 40px 0;
-    }
+    } */
 
     .terms-header {
         margin-bottom: 35px;
