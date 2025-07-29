@@ -222,7 +222,7 @@
     .community-card {
         width: 250px;
         height: 400px;
-        background: #FFFFFF;
+        /* background: #FFFFFF; */
         border-radius: 12px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         flex-shrink: 0;
