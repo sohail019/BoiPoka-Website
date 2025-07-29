@@ -71,16 +71,16 @@ p {
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 25px;
 }
 
 .poka-logo {
-    height: 30px;
+    height: 50px;
     width: auto;
 }
 
 .boipoka-text {
-    height: 25px;
+    height: 16px;
     width: auto;
 }
 
@@ -306,7 +306,7 @@ section {
     }
     
     .boipoka-text {
-        height: 20px;
+        height: 10px;
     }
     
     .navigation {
@@ -420,11 +420,11 @@ section {
 
 @media (max-width: 480px) {
     .poka-logo {
-        height: 22px;
+        height: 20px;
     }
     
     .boipoka-text {
-        height: 18px;
+        height: 10px;
     }
     
     .hero-title {
