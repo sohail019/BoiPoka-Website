@@ -82,7 +82,8 @@ jQuery(document).ready(function ($) {
 
   function init() {
     handleStickyHeader();
-    initFeatureSwipers();
+    // initFeatureSwipers();
+    $(".swiper").length && initFeatureSwipers();
     AOS.init({once: true});
   }
 
