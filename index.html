@@ -88,6 +88,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!--Aos -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
     <!-- Header Section -->
@@ -265,30 +268,63 @@
       <div class="feature-center">
         <!-- Navigation Arrows -->
         <div class="slider-arrows">
-          <button class="slider-arrow left-arrow" aria-label="Previous slide"></button>
-          <button class="slider-arrow right-arrow" aria-label="Next slide"></button>
+          <button class="slider-arrow left-arrow" id="feature-prev">
+            <span class="sr-only">Previous slide</span>
+          </button>
+          <button class="slider-arrow right-arrow" id="feature-next">
+            <span class="sr-only">Next slide</span>
+          </button>
         </div>
 
-        <!-- Slider Pagination -->
-        <div class="slider-pagination">
+        <!-- Custom Pagination -->
+        <div class="slider-pagination" id="feature-pagination">
           <span class="pagination-number active" data-slide="0">01</span>
           <span class="pagination-number" data-slide="1">02</span>
           <span class="pagination-number" data-slide="2">03</span>
           <span class="pagination-number" data-slide="3">04</span>
         </div>
 
-        <!-- Content -->
-        <div class="feature-content-wrapper" data-aos-offset="100" data-aos="fade-in" data-aos-duration="600" data-aos-delay="200">
-          <h3 class="feature-content-title">Use your data for yourself</h3>
-          <p class="feature-content-description">
-            Our AI identifies books and adds them to your digital library with all the details automatically. Get insights into your reading habits and discover your literary personality.
-          </p>
+        <!-- Swiper Container -->
+        <div class="swiper feature-swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="feature-content-wrapper">
+                <h3 class="feature-content-title">Snap away</h3>
+                <p class="feature-content-description">Point your camera at book spines, individual books, or even that chaotic pile on your nightstand.</p>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="feature-content-wrapper">
+                <h3 class="feature-content-title">Watch it organise</h3>
+                <p class="feature-content-description">Our AI identifies books and adds them to your digital library with all the details automatically.</p>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="feature-content-wrapper">
+                <h3 class="feature-content-title">Discover and share</h3>
+                <p class="feature-content-description">Get recommendations, join discussions, and show off your literary taste.</p>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+              <div class="feature-content-wrapper">
+                <h3 class="feature-content-title">Use your data for yourself</h3>
+                <p class="feature-content-description">Get insights into your reading habits and discover your literary personality.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Right Image - Mobile with Screen Content -->
       <div class="feature-right" data-aos-offset="100" data-aos="fade-in" data-aos-duration="600" data-aos-delay="400">
-        <img src="assets/slide-image.png" alt="Mobile App Mockup" class="mobile-mockup" />
+        <img src="" alt="Mobile App Mockup" class="mobile-mockup" id="feature-image" />
       </div>
     </section>
 
@@ -497,6 +533,8 @@
     <script src="./script.js"></script>
     <script src="./main.js"></script>
     <script src="./mobile-menu.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./feature-slider.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   </body>

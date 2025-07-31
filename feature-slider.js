@@ -1,213 +1,185 @@
-// Feature Slider Functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const featureSection = document.querySelector('.feature-section');
-    const paginationNumbers = document.querySelectorAll('.pagination-number');
-    const contentWrapper = document.querySelector('.feature-content-wrapper');
-    const contentTitle = document.querySelector('.feature-content-title');
-    const contentDescription = document.querySelector('.feature-content-description');
-    const mobileImage = document.querySelector('.mobile-mockup');
-    const leftArrow = document.querySelector('.left-arrow');
-    const rightArrow = document.querySelector('.right-arrow');
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('🚀 [SLIDER] Initializing synchronized feature slider...');
+  
+  const slideData = [
+    {
+      title: "Snap away",
+      description: "Point your camera at book spines, individual books, or even that chaotic pile on your nightstand.",
+      image: "assets/library.png"
+    },
+    {
+      title: "Watch it organise",
+      description: "Our AI identifies books and adds them to your digital library with all the details automatically.",
+      image: "assets/shelves.png"
+    },
+    {
+      title: "Discover and share",
+      description: "Get recommendations, join discussions, and show off your literary taste.",
+      image: "assets/grid.png"
+    },
+    {
+      title: "Use your data for yourself",
+      description: "Get insights into your reading habits and discover your literary personality.",
+      image: "assets/slide-image.png"
+    }
+  ];
 
-    // Slide data
-    const slides = [
-        {
-            title: "Use your data for yourself",
-            description: "Our AI identifies books and adds them to your digital library with all the details automatically. Get insights into your reading habits and discover your literary personality.",
-            image: "assets/slide-image.png"
-        },
-        {
-            title: "Track your reading journey",
-            description: "Monitor your progress, set reading goals, and celebrate milestones. Our smart tracking helps you build consistent reading habits while discovering patterns in your preferences.",
-            image: "assets/slide-image.png"
-        },
-        {
-            title: "Connect with readers",
-            description: "Join book clubs, share reviews, and discover your next favorite read through our vibrant community. Find readers with similar tastes and expand your literary horizons together.",
-            image: "assets/slide-image.png"
-        },
-        {
-            title: "Organize your library",
-            description: "Create custom shelves, categorize books by genre or mood, and build your perfect digital library. Access your entire collection from anywhere, anytime with ease.",
-            image: "assets/slide-image.png"
-        }
-    ];
+  console.log('📊 [SLIDER] Loaded', slideData.length, 'slides');
 
-    let currentSlide = 0;
-    let autoSlideInterval;
-    let isTransitioning = false;
+  const paginationNumbers = document.querySelectorAll('.pagination-number');
+  const featureImage = document.getElementById('feature-image');
+  const featureTitle = document.querySelector('.feature-content-title');
+  const featureDescription = document.querySelector('.feature-content-description');
 
-    // Initialize slider
-    function initSlider() {
-        updateSlide(0);
-        startAutoSlide();
-        setupEventListeners();
+  console.log('🔍 [SLIDER] DOM elements found:', {
+    pagination: paginationNumbers.length,
+    image: !!featureImage,
+    title: !!featureTitle,
+    description: !!featureDescription,
+    initialImageSrc: featureImage?.src || 'empty'
+  });
+
+  // Preload all images to avoid flicker
+  console.log('⏳ [PRELOAD] Starting image preload...');
+  slideData.forEach((slide, index) => {
+    const img = new Image();
+    img.onload = () => console.log(`✅ [PRELOAD] Image ${index} loaded:`, slide.image);
+    img.onerror = () => console.warn(`❌ [PRELOAD] Failed to load image ${index}:`, slide.image);
+    img.src = slide.image;
+  });
+
+  let isUpdating = false;
+
+  const featureSwiper = new Swiper('.feature-swiper', {
+    slidesPerView: 1,
+    speed: 600,
+    loop: false,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
+    },
+    navigation: {
+      nextEl: '#feature-next',
+      prevEl: '#feature-prev',
+    },
+    effect: 'slide',
+    on: {
+      init: function () {
+        console.log('🎬 [SWIPER] Initialized, setting first slide');
+        updateSlideSync(0); // Set everything on first load
+      },
+      slideChangeTransitionStart: function() {
+        console.log('🚀 [SWIPER] Slide transition started to slide', this.activeIndex);
+      },
+      slideChangeTransitionEnd: function () {
+        console.log('🎯 [SWIPER] Slide transition ended, syncing slide', this.activeIndex);
+        updateSlideSync(this.activeIndex); // Sync all updates ONLY after transition completes
+      },
+      autoplayStart: function() {
+        console.log('▶️ [AUTOPLAY] Started');
+      },
+      autoplayStop: function() {
+        console.log('⏸️ [AUTOPLAY] Stopped');
+      }
+    }
+  });
+
+  // SYNCHRONIZED UPDATE FUNCTION - All changes happen together
+  function updateSlideSync(index) {
+    if (isUpdating) {
+      console.log('⏸️ [SYNC] Update already in progress, skipping');
+      return;
     }
 
-    // Update slide content with fade transition
-    function updateSlide(slideIndex, direction = 'next') {
-        if (isTransitioning) return;
+    isUpdating = true;
+    console.log(`🔄 [SYNC] Starting synchronized update to slide ${index}`);
+
+    // Step 1: Fade out ALL elements together
+    console.log('📉 [SYNC] Fading out all content');
+    featureTitle.style.transition = 'opacity 0.25s ease-out';
+    featureDescription.style.transition = 'opacity 0.25s ease-out';
+    featureImage.style.transition = 'opacity 0.25s ease-out';
+    
+    featureTitle.style.opacity = '0';
+    featureDescription.style.opacity = '0';
+    featureImage.style.opacity = '0';
+
+    setTimeout(() => {
+      // Step 2: Update ALL content at the same time
+      console.log(`📝 [SYNC] Updating all content for slide ${index}:`, {
+        title: slideData[index].title,
+        image: slideData[index].image
+      });
+      
+      featureTitle.textContent = slideData[index].title;
+      featureDescription.textContent = slideData[index].description;
+      featureImage.src = slideData[index].image;
+
+      // Step 3: Update pagination (custom UI) 
+      console.log(`🔢 [SYNC] Updating pagination to slide ${index}`);
+      paginationNumbers.forEach((num, i) => {
+        const wasActive = num.classList.contains('active');
+        const shouldBeActive = i === index;
+        num.classList.toggle('active', shouldBeActive);
         
-        isTransitioning = true;
-        currentSlide = slideIndex;
-
-        // Add fade-out class
-        contentWrapper.classList.add('fade-out');
-        mobileImage.classList.add('fade-out');
-
-        setTimeout(() => {
-            // Update content
-            contentTitle.textContent = slides[slideIndex].title;
-            contentDescription.textContent = slides[slideIndex].description;
-            mobileImage.src = slides[slideIndex].image;
-            mobileImage.alt = `Mobile App Mockup - ${slides[slideIndex].title}`;
-
-            // Update pagination
-            paginationNumbers.forEach((number, index) => {
-                number.classList.toggle('active', index === slideIndex);
-            });
-
-            // Remove fade-out and allow fade-in
-            setTimeout(() => {
-                contentWrapper.classList.remove('fade-out');
-                mobileImage.classList.remove('fade-out');
-                isTransitioning = false;
-            }, 50);
-        }, 200);
-    }
-
-    // Go to next slide
-    function nextSlide() {
-        const nextIndex = (currentSlide + 1) % slides.length;
-        updateSlide(nextIndex, 'next');
-    }
-
-    // Go to previous slide
-    function prevSlide() {
-        const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
-        updateSlide(prevIndex, 'prev');
-    }
-
-    // Start auto-slide with longer delay
-    function startAutoSlide() {
-        autoSlideInterval = setInterval(() => {
-            if (!featureSection.matches(':hover')) {
-                nextSlide();
-            }
-        }, 7000); // Increased from 4000ms to 7000ms (7 seconds)
-    }
-
-    // Stop auto-slide
-    function stopAutoSlide() {
-        if (autoSlideInterval) {
-            clearInterval(autoSlideInterval);
-            autoSlideInterval = null;
+        if (wasActive !== shouldBeActive) {
+          console.log(`📍 [PAGINATION] Slide ${i}:`, shouldBeActive ? 'activated' : 'deactivated');
         }
-    }
+      });
 
-    // Restart auto-slide
-    function restartAutoSlide() {
-        stopAutoSlide();
-        startAutoSlide();
-    }
+      // Step 4: Fade in ALL elements together
+      console.log('📈 [SYNC] Fading in all content');
+      featureTitle.style.opacity = '1';
+      featureDescription.style.opacity = '1';
+      featureImage.style.opacity = '1';
 
-    // Setup event listeners
-    function setupEventListeners() {
-        // Pagination click events
-        paginationNumbers.forEach((number, index) => {
-            number.addEventListener('click', () => {
-                if (index !== currentSlide && !isTransitioning) {
-                    updateSlide(index);
-                    restartAutoSlide();
-                }
-            });
-        });
+      setTimeout(() => {
+        isUpdating = false;
+        console.log(`✅ [SYNC] Synchronized update complete for slide ${index}`);
+      }, 250);
+    }, 250);
+  }
 
-        // Arrow navigation
-        if (leftArrow) {
-            leftArrow.addEventListener('click', () => {
-                if (!isTransitioning) {
-                    prevSlide();
-                    restartAutoSlide();
-                }
-            });
-        }
-
-        if (rightArrow) {
-            rightArrow.addEventListener('click', () => {
-                if (!isTransitioning) {
-                    nextSlide();
-                    restartAutoSlide();
-                }
-            });
-        }
-
-        // Pause on hover
-        featureSection.addEventListener('mouseenter', () => {
-            featureSection.classList.add('paused');
-        });
-
-        // Resume on mouse leave
-        featureSection.addEventListener('mouseleave', () => {
-            featureSection.classList.remove('paused');
-        });
-
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (isElementInViewport(featureSection)) {
-                if (e.key === 'ArrowLeft') {
-                    e.preventDefault();
-                    if (!isTransitioning) {
-                        prevSlide();
-                        restartAutoSlide();
-                    }
-                } else if (e.key === 'ArrowRight') {
-                    e.preventDefault();
-                    if (!isTransitioning) {
-                        nextSlide();
-                        restartAutoSlide();
-                    }
-                }
-            }
-        });
-
-        // Handle visibility change (pause when tab is not active)
-        document.addEventListener('visibilitychange', () => {
-            if (document.hidden) {
-                stopAutoSlide();
-            } else {
-                restartAutoSlide();
-            }
-        });
-    }
-
-    // Check if element is in viewport
-    function isElementInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-
-    // Handle window focus/blur for auto-slide
-    window.addEventListener('focus', () => {
-        if (!document.hidden) {
-            restartAutoSlide();
-        }
+  // Custom pagination click with sync
+  paginationNumbers.forEach((num, index) => {
+    num.addEventListener('click', (e) => {
+      e.preventDefault();
+      console.log(`👆 [PAGINATION] Click on slide ${index}`);
+      
+      if (isUpdating) {
+        console.log('⏸️ [PAGINATION] Update in progress, ignoring click');
+        return;
+      }
+      
+      if (featureSwiper.activeIndex === index) {
+        console.log('⏭️ [PAGINATION] Already on slide', index);
+        return;
+      }
+      
+      console.log(`🎯 [PAGINATION] Navigating to slide ${index}`);
+      featureSwiper.slideTo(index);
     });
+  });
 
-    window.addEventListener('blur', () => {
-        stopAutoSlide();
-    });
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    if (e.target.tagName !== 'INPUT' && 
+        e.target.tagName !== 'TEXTAREA' && 
+        !e.target.isContentEditable &&
+        !isUpdating) {
+      
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        console.log('⬅️ [KEYBOARD] Left arrow pressed');
+        featureSwiper.slidePrev();
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        console.log('➡️ [KEYBOARD] Right arrow pressed');
+        featureSwiper.slideNext();
+      }
+    }
+  });
 
-    // Initialize the slider
-    initSlider();
-
-    // Cleanup on page unload
-    window.addEventListener('beforeunload', () => {
-        stopAutoSlide();
-    });
+  console.log('🎉 [SLIDER] Synchronized feature slider setup complete with 5s autoplay');
 });
