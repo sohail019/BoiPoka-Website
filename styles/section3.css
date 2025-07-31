@@ -5,6 +5,7 @@
     display: flex;
     padding: 0;
     position: relative;
+    overflow-x: hidden;
 }
 
 /* Left Image */
@@ -12,7 +13,8 @@
     flex: 1;
     position: relative;
     overflow: hidden;
-    min-width: 38rem;
+    max-width: 38rem;
+    width: 100%;
 }
 
 .man-image {
@@ -247,8 +249,22 @@
     display: flex;
     justify-content: center;
     align-items: end;
-    padding: 0 40px;
+    /* padding: 0 40px; */
     position: relative;
+    max-width: 30rem;
+}
+.feature-right .swiper-slide{
+    height: 35rem;
+}
+
+.feature-right .img-wrap img{
+    height: 100%;
+}
+.feature-right .img-wrap{
+    height: 100%;
+    max-width: 40rem;
+    width: 100%;
+    text-align: center;
 }
 
 /* Mobile Frame - Anti-flicker improvements */
@@ -344,9 +360,18 @@
     .feature-left {
         display: none;
     }
+    .feature-right{
+        max-width: initial;
+    }
+    .feature-right .img-wrap{
+        max-width: initial;
+    }
+    .feature-right .swiper-slide{
+    height: 25rem;
+}
 
     /* Mobile mockup comes first and is more prominent */
-    .feature-right {
+    /* .feature-right {
         order: -1;
         padding: 30px 20px 20px;
         background-color: #F5F5F5;
@@ -355,7 +380,7 @@
         justify-content: center;
         align-items: center;
         position: relative;
-    }
+    } */
 
     .mobile-mockup {
         max-width: 280px;
@@ -413,9 +438,9 @@
 
 /* Small Mobile */
 @media (max-width: 480px) {
-    .feature-right {
+    /* .feature-right {
         padding: 30px 15px 10px;
-    }
+    } */
 
     .mobile-mockup {
         max-width: 250px;

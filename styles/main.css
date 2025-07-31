@@ -195,6 +195,7 @@ h3 {
     align-items: center;
     /* padding: 50px 0 30px; */
     background-color: #E7E7E7;
+    overflow: hidden;
 }
 
 .hero-background {

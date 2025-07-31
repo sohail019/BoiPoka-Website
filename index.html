@@ -88,7 +88,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!--Aos -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    
+
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
@@ -278,10 +278,10 @@
 
         <!-- Custom Pagination -->
         <div class="slider-pagination" id="feature-pagination">
-          <span class="pagination-number active" data-slide="0">01</span>
-          <span class="pagination-number" data-slide="1">02</span>
-          <span class="pagination-number" data-slide="2">03</span>
-          <span class="pagination-number" data-slide="3">04</span>
+          <span class="pagination-number">01</span>
+          <span class="pagination-number">02</span>
+          <span class="pagination-number">03</span>
+          <span class="pagination-number">04</span>
         </div>
 
         <!-- Swiper Container -->
@@ -306,16 +306,16 @@
             <!-- Slide 3 -->
             <div class="swiper-slide">
               <div class="feature-content-wrapper">
-                <h3 class="feature-content-title">Discover and share</h3>
-                <p class="feature-content-description">Get recommendations, join discussions, and show off your literary taste.</p>
+                <h3 class="feature-content-title">Use your data for yourself</h3>
+                <p class="feature-content-description">Our Al identifies books and adds them to your digital library with all the details</p>
               </div>
             </div>
 
             <!-- Slide 4 -->
             <div class="swiper-slide">
               <div class="feature-content-wrapper">
-                <h3 class="feature-content-title">Use your data for yourself</h3>
-                <p class="feature-content-description">Get insights into your reading habits and discover your literary personality.</p>
+                <h3 class="feature-content-title">Discover and share</h3>
+                <p class="feature-content-description">Get recommendations, join discussions, and show off your literary taste.</p>
               </div>
             </div>
           </div>
@@ -324,7 +324,38 @@
 
       <!-- Right Image - Mobile with Screen Content -->
       <div class="feature-right" data-aos-offset="100" data-aos="fade-in" data-aos-duration="600" data-aos-delay="400">
-        <img src="" alt="Mobile App Mockup" class="mobile-mockup" id="feature-image" />
+        <!-- Swiper Container -->
+        <div class="swiper image-swiper">
+          <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide">
+              <div class="img-wrap">
+                <img src="./assets/library.png" alt="Mobile App Mockup" id="feature-image" />
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide">
+              <div class="img-wrap">
+                <img src="./assets/grid.png" alt="Mobile App Mockup" id="feature-image" />
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide">
+              <div class="img-wrap">
+                <img src="./assets/slide-image.png" alt="Mobile App Mockup" id="feature-image" />
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="swiper-slide">
+              <div class="img-wrap">
+                <img src="./assets/shelves.png" alt="Mobile App Mockup" id="feature-image" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -530,12 +561,10 @@
         </div>
       </div>
     </footer>
-    <script src="./script.js"></script>
     <script src="./main.js"></script>
     <script src="./mobile-menu.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./feature-slider.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   </body>
 </html>
